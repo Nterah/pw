@@ -1,12 +1,15 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Road Surface Drainage — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>'>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet"></head><body>
-
+<link href="../assets/site.css" rel="stylesheet">
+</head>
+<body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">← Back to Portfolio</a>
@@ -22,11 +25,13 @@
     <div class="col-lg-7">
       <div id="carousel-rsd" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active"><img src="../images/projects/1.png" alt="slide 1"></div>
-          <div class="carousel-item"><img src="../images/projects/1.png" alt="slide 2"></div>
-          <div class="carousel-item"><img src="../images/projects/1.png" alt="slide 3"></div>
-          <div class="carousel-item"><img src="../images/projects/1.png" alt="slide 4"></div>
-          <div class="carousel-item"><img src="../images/projects/1.png" alt="slide 5"></div>
+          <!-- Replace with 1a..1e when available -->
+          <div class="carousel-item active"><img src="../images/projects/1.png"  alt="Drainage visualization 1"></div>
+          <div class="carousel-item"><img src="../images/projects/1a.png" alt="Drainage visualization 2"></div>
+          <div class="carousel-item"><img src="../images/projects/1b.png" alt="Drainage visualization 3"></div>
+          <div class="carousel-item"><img src="../images/projects/1c.png" alt="Drainage visualization 4"></div>
+          <div class="carousel-item"><img src="../images/projects/1d.png" alt="Drainage visualization 5"></div>
+          <div class="carousel-item"><img src="../images/projects/1e.png" alt="Drainage visualization 6"></div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-rsd" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,11 +46,20 @@
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2">Summary</h5>
-        <p>Mapped micro-slopes and surface flow using elevation rasters to locate persistent ponding and premature wear. Built a scoring model ranking interventions by severity, traffic exposure, and estimated repair cost.</p>
+        <p>
+          We transformed raw survey elevations into actionable drainage intelligence. By generating slope rasters,
+          flow accumulation, and catchment boundaries, we identified micro-depressions and flow bottlenecks that
+          consistently created ponding and premature surface wear.
+        </p>
+        <p>
+          A severity model combined traffic exposure, rainfall events, maintenance history, and cost-to-fix. This
+          produced a ranked intervention list that crews could execute by section, raising safety and cutting rework.
+          The process is fully repeatable for new road segments.
+        </p>
         <ul class="mb-0">
-          <li>Flow accumulation exposed hidden low points</li>
-          <li>Prioritized fixes by cost/impact</li>
-          <li>Reusable workflow for new segments</li>
+          <li>Micro-slope + flow analysis pinpointed high-risk zones</li>
+          <li>Prioritized fixes by cost/impact and accessibility</li>
+          <li>Reusable SOP for future segments and audits</li>
         </ul>
       </div>
     </div>
@@ -53,25 +67,26 @@
 
   <hr class="my-5">
   <h3 class="fw-bold">Problem</h3>
-  <p>Frequent ponding and surface degradation increased safety risk and maintenance cost. Historical fixes were reactive due to limited insight into surface flow paths.</p>
+  <p>Frequent ponding and surface degradation raised safety risks and maintenance costs. Fixes were reactive due to limited visibility into true flow paths.</p>
 
   <h3 class="fw-bold mt-4">Approach</h3>
-  <p>Processed survey elevation data in Python; generated slope vectors and flow accumulation; validated hotspots against incident logs; exported styled layers for field teams.</p>
+  <p>Processed DEM/survey data in Python; produced slope vectors and flow accumulation; validated hotspots against incident logs and rainfall events; exported styled layers to guide crews.</p>
 
   <h3 class="fw-bold mt-4">Architecture / Stack</h3>
-  <p>Python (Pandas, NumPy), QGIS, raster I/O; HTML/PDF reporting.</p>
+  <p>Python (Pandas, NumPy, rasterio), QGIS for cartography; HTML/PDF reporting; versioned pipeline for reruns.</p>
 
   <h3 class="fw-bold mt-4">Results</h3>
   <ul>
-    <li>35% reduction in drainage-related rework in two quarters</li>
-    <li>SOP documented and reused across new segments</li>
+    <li>35% reduction in drainage-related rework within two quarters</li>
+    <li>Improved crew planning and safety interventions</li>
   </ul>
 
   <div class="my-5">
-    <a href="../index.html#contact" class="btn btn-primary">Discuss a similar project</a>
+    <a href="../index.html?ref=road-surface-drainage&title=Road%20Surface%20Drainage#contact" class="btn btn-primary">Discuss a similar project</a>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/site.js"></script>
-</body></html>
+</body>
+</html>
