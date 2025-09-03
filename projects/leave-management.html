@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leave Management — Case Study | Ntembeko Zifuku</title>
-  <meta name="description" content="Scripted Google Sheets tool for leave requests, approvals, calendars, staff lists, and reports." />
-  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>' />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    :root{ --primary:#ff7a8a; --secondary:#5b7da8; --bg:#f7f9fc; --surface:#ffffff; --text:#243041; --muted:#6b7a90; --shadow:0 6px 20px rgba(20,35,60,.08) }
-    body{ font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); padding-top:72px;}
-    .navbar{ background:var(--surface); box-shadow:var(--shadow); }
-    .section-title{ font-weight:800; color:var(--secondary);}
-    .card{ border:0; border-radius:16px; box-shadow:var(--shadow);}
-    .project-img{width:100%;height:auto;display:block;}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leave Management System — Case Study | Ntembeko Zifuku</title>
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>'>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/site.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top"><div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">← Back to Portfolio</a>
-  </div></nav>
+    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+  </div>
+</nav>
 
-  <main class="container my-5">
-    <h1 class="section-title">Leave Management System</h1>
-    <p class="text-muted">Google Sheets • Apps Script • Calendar API</p>
+<main class="container my-5">
+  <h1 class="section-title">Leave Management System</h1>
+  <p class="text-muted">Google Sheets • Apps Script • Calendar API</p>
 
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <img loading="lazy" src="../images/projects/3.png" class="img-fluid rounded-3 shadow-sm project-img" alt="Leave management dashboard">
-      </div>
-      <div class="col-lg-5">
-        <div class="card p-4">
-          <h5 class="fw-bold mb-2">Summary</h5>
-          <p class="mb-3">Scripted a multi-sheet system handling requests, approvals, calendars, and monthly reporting.</p>
-          <ul class="mb-0">
-            <li>Problem: fragmented leave tracking, manual follow-ups</li>
-            <li>Approach: Apps Script workflow + validation, summary views</li>
-            <li>Outcome: smooth approvals; single source of truth</li>
-          </ul>
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div id="carousel-lms" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="../images/projects/3.png"  alt="LMS 1"></div>
+          <div class="carousel-item"><img src="../images/projects/3a.png" alt="LMS 2"></div>
+          <div class="carousel-item"><img src="../images/projects/3b.png" alt="LMS 3"></div>
+          <div class="carousel-item"><img src="../images/projects/3c.png" alt="LMS 4"></div>
+          <div class="carousel-item"><img src="../images/projects/3d.png" alt="LMS 5"></div>
+          <div class="carousel-item"><img src="../images/projects/3e.png" alt="LMS 6"></div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-lms" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-lms" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-
-    <hr class="my-5">
-    <h3 class="fw-bold">Process</h3>
-    <p>Summary of validation rules, automation triggers, and report generation.</p>
-
-    <div class="my-5">
-      <a href="../index.html#contact" class="btn btn-primary">Discuss a similar project</a>
+    <div class="col-lg-5">
+      <div class="card p-4">
+        <h5 class="fw-bold mb-2">Summary</h5>
+        <p>
+          Requests, approvals, and entitlement checks were scattered across emails and spreadsheets. We built a
+          single, validated flow where users submit requests, managers approve with one click, and calendars update
+          automatically.
+        </p>
+        <p>
+          Monthly summaries and policy checks (carry-over, part-time pro-rating) are baked in. HR and team leads get
+          visibility into coverage by role so resourcing is never a surprise.
+        </p>
+        <ul class="mb-0">
+          <li>Self-service requests with policy validation</li>
+          <li>Automated approvals + Calendar sync</li>
+          <li>Zero manual collation for month-end</li>
+        </ul>
+      </div>
     </div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <hr class="my-5">
+  <h3 class="fw-bold">Problem</h3>
+  <p>Inconsistent processes led to errors, delays, and poor visibility of who’s away when.</p>
+
+  <h3 class="fw-bold mt-4">Approach</h3>
+  <p>Apps Script orchestrated requests → approvals → calendar updates; master analytics sheet handled reporting and carry-over rules; monthly PDFs emailed to managers.</p>
+
+  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
+  <p>Google Sheets, Apps Script triggers, Calendar API; validated forms and protected ranges for integrity.</p>
+
+  <h3 class="fw-bold mt-4">Results</h3>
+  <ul>
+    <li>Single source of truth for HR & managers</li>
+    <li>Clear visibility of team coverage and leave trends</li>
+  </ul>
+
+  <div class="my-5">
+    <a href="../index.html?ref=leave-management&title=Leave%20Management%20System#contact" class="btn btn-primary">Discuss a similar project</a>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/site.js"></script>
 </body>
 </html>
