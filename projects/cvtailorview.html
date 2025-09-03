@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CVTailorView — Case Study | Ntembeko Zifuku</title>
-  <meta name="description" content="React-based CV management with advanced search, roles, templates, and exports." />
-  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>' />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    :root{ --primary:#ff7a8a; --secondary:#5b7da8; --bg:#f7f9fc; --surface:#ffffff; --text:#243041; --muted:#6b7a90; --shadow:0 6px 20px rgba(20,35,60,.08) }
-    body{ font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); padding-top:72px;}
-    .navbar{ background:var(--surface); box-shadow:var(--shadow); }
-    .section-title{ font-weight:800; color:var(--secondary);}
-    .card{ border:0; border-radius:16px; box-shadow:var(--shadow);}
-    .project-img{width:100%;height:auto;display:block;}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CVTailorView — Case Study | Ntembeko Zifuku</title>
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>'>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/site.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top"><div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">← Back to Portfolio</a>
-  </div></nav>
+    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+  </div>
+</nav>
 
-  <main class="container my-5">
-    <h1 class="section-title">CVTailorView</h1>
-    <p class="text-muted">React • Flask • SQLite/PostgreSQL • Exports</p>
+<main class="container my-5">
+  <h1 class="section-title">CVTailorView</h1>
+  <p class="text-muted">React • Flask • SQLite/PostgreSQL • Exports</p>
 
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <img loading="lazy" src="../images/projects/4.png" class="img-fluid rounded-3 shadow-sm project-img" alt="CVTailorView dashboard">
-      </div>
-      <div class="col-lg-5">
-        <div class="card p-4">
-          <h5 class="fw-bold mb-2">Summary</h5>
-          <p class="mb-3">End-to-end CV management with profiles, roles, search, and template-based Word/PDF export.</p>
-          <ul class="mb-0">
-            <li>Problem: inconsistent CV versions and formatting</li>
-            <li>Approach: central DB + filters + export templates</li>
-            <li>Outcome: consistent branding; faster proposals</li>
-          </ul>
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div id="carousel-cvt" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="../images/projects/4.png"  alt="CVTailorView 1"></div>
+          <div class="carousel-item"><img src="../images/projects/4a.png" alt="CVTailorView 2"></div>
+          <div class="carousel-item"><img src="../images/projects/4b.png" alt="CVTailorView 3"></div>
+          <div class="carousel-item"><img src="../images/projects/4c.png" alt="CVTailorView 4"></div>
+          <div class="carousel-item"><img src="../images/projects/4d.png" alt="CVTailorView 5"></div>
+          <div class="carousel-item"><img src="../images/projects/4e.png" alt="CVTailorView 6"></div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-cvt" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-cvt" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-
-    <hr class="my-5">
-    <h3 class="fw-bold">Highlights</h3>
-    <ul>
-      <li>Advanced search with role fallback and keyword matching</li>
-      <li>Template-driven DOCX/PDF generation</li>
-    </ul>
-
-    <div class="my-5">
-      <a href="../index.html#contact" class="btn btn-primary">Discuss a similar project</a>
+    <div class="col-lg-5">
+      <div class="card p-4">
+        <h5 class="fw-bold mb-2">Summary</h5>
+        <p>
+          Proposals suffered from inconsistent CV versions and slow discovery of relevant experience. CVTailorView
+          centralizes candidate data, projects, skills, and roles with fast, faceted search and tagging.
+        </p>
+        <p>
+          Consultants can export DOCX/PDF using branded templates that adapt content to the target role, reducing
+          editing and ensuring consistent presentation across bids.
+        </p>
+        <ul class="mb-0">
+          <li>Advanced filters + tagging for rapid shortlist</li>
+          <li>Template-based exports with company branding</li>
+          <li>Role-based access control and activity logs</li>
+        </ul>
+      </div>
     </div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <hr class="my-5">
+  <h3 class="fw-bold">Problem</h3>
+  <p>Multiple CV versions lived across email and folders, causing delays and off-brand proposals.</p>
+
+  <h3 class="fw-bold mt-4">Approach</h3>
+  <p>Designed normalized schema; built React UI for search and curation; Flask API; templated exports via python-docx/reportlab; RBAC and audit trails for publishing.</p>
+
+  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
+  <p>React frontend, Flask API, SQLite→PostgreSQL migration; object storage for attachments; CI-ready export pipeline.</p>
+
+  <h3 class="fw-bold mt-4">Results</h3>
+  <ul>
+    <li>Faster proposal turnaround with consistent branding</li>
+    <li>Improved discoverability across skills and projects</li>
+  </ul>
+
+  <div class="my-5">
+    <a href="../index.html?ref=cvtailorview&title=CVTailorView#contact" class="btn btn-primary">Discuss a similar project</a>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/site.js"></script>
 </body>
 </html>
