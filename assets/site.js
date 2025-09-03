@@ -34,4 +34,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
     sections.forEach(s => obs.observe(s));
   }
+
+  // --- Prefill contact form from ?ref= & ?title= ---
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  const title = params.get('title');
+  if (ref && document.querySelector('#contact')) {
+    const textarea = document.querySelector('#contact textarea[name="message"]');
+    if (textarea) {
+      const label = title ? `Project interest: ${title}` : `Project interest: ${ref.replace(/-/g,' ')}`;
+      const existing = textarea.value.trim();
+      textarea.value = `[${label}]` + (existing ? `\n\n${existing}` : '\n\n');
+      textarea.focus();
+    }
+  }
 });
