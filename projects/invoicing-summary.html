@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Invoicing Summary — Case Study | Ntembeko Zifuku</title>
-  <meta name="description" content="Automated invoice sorting and statement generation using Excel VBA and Power Query." />
-  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>' />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    :root{ --primary:#ff7a8a; --secondary:#5b7da8; --bg:#f7f9fc; --surface:#ffffff; --text:#243041; --muted:#6b7a90; --shadow:0 6px 20px rgba(20,35,60,.08) }
-    body{ font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); padding-top:72px;}
-    .navbar{ background:var(--surface); box-shadow:var(--shadow); }
-    .section-title{ font-weight:800; color:var(--secondary);}
-    .card{ border:0; border-radius:16px; box-shadow:var(--shadow);}
-    .project-img{width:100%;height:auto;display:block;}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoicing Summary — Case Study | Ntembeko Zifuku</title>
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>'>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/site.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top"><div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">← Back to Portfolio</a>
-  </div></nav>
+    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+  </div>
+</nav>
 
-  <main class="container my-5">
-    <h1 class="section-title">Invoicing Summary</h1>
-    <p class="text-muted">Excel • Power Query • VBA • Power BI</p>
+<main class="container my-5">
+  <h1 class="section-title">Invoicing Summary</h1>
+  <p class="text-muted">Excel • Power Query • VBA • Power BI</p>
 
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <img loading="lazy" src="../images/projects/2.png" class="img-fluid rounded-3 shadow-sm project-img" alt="Invoicing dashboard">
-      </div>
-      <div class="col-lg-5">
-        <div class="card p-4">
-          <h5 class="fw-bold mb-2">Summary</h5>
-          <p class="mb-3">Automated invoice sorting and monthly statements with Power Query + VBA to remove manual effort and errors.</p>
-          <ul class="mb-0">
-            <li>Problem: time-consuming manual reconciliations</li>
-            <li>Approach: parameterized queries, VBA statement generator</li>
-            <li>Outcome: ~80% reduction in prep time; consistent statements</li>
-          </ul>
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div id="carousel-inv" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="../images/projects/2.png"  alt="Invoicing 1"></div>
+          <div class="carousel-item"><img src="../images/projects/2a.png" alt="Invoicing 2"></div>
+          <div class="carousel-item"><img src="../images/projects/2b.png" alt="Invoicing 3"></div>
+          <div class="carousel-item"><img src="../images/projects/2c.png" alt="Invoicing 4"></div>
+          <div class="carousel-item"><img src="../images/projects/2d.png" alt="Invoicing 5"></div>
+          <div class="carousel-item"><img src="../images/projects/2e.png" alt="Invoicing 6"></div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-inv" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-inv" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-
-    <hr class="my-5">
-    <h3 class="fw-bold">Process</h3>
-    <p>Describe sources, transformations, and automation logic.</p>
-
-    <div class="my-5">
-      <a href="../index.html#contact" class="btn btn-primary">Discuss a similar project</a>
+    <div class="col-lg-5">
+      <div class="card p-4">
+        <h5 class="fw-bold mb-2">Summary</h5>
+        <p>
+          Month-end used to take several days and led to frequent disputes. We built a consolidated staging model
+          (clients, invoices, receipts) and a repeatable transformation pipeline in Power Query with clear data
+          contracts between steps.
+        </p>
+        <p>
+          A VBA generator produced signed statements per client, embedded anomaly notes (missing POs, unmatched
+          receipts), and stored files in region-based folders. Optional Power BI views surfaced trends and aging.
+        </p>
+        <ul class="mb-0">
+          <li>Consistent, auditable statements delivered automatically</li>
+          <li>Anomaly & exception sheet for targeted cleanup</li>
+          <li>~80% time saved at month-end</li>
+        </ul>
+      </div>
     </div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <hr class="my-5">
+  <h3 class="fw-bold">Problem</h3>
+  <p>Manual sorting and statement creation were error-prone and slow. No single source of truth existed.</p>
+
+  <h3 class="fw-bold mt-4">Approach</h3>
+  <p>Normalized sources with Power Query; applied parameterized transforms; built a VBA packager to export per-client PDFs with consistent naming and sign-offs.</p>
+
+  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
+  <p>Excel + Power Query, VBA, optional Power BI; distribution via shared folders or SharePoint/Drive.</p>
+
+  <h3 class="fw-bold mt-4">Results</h3>
+  <ul>
+    <li>Fewer disputes thanks to a clear audit trail</li>
+    <li>Predictable delivery cadence and standardized outputs</li>
+  </ul>
+
+  <div class="my-5">
+    <a href="../index.html?ref=invoicing-summary&title=Invoicing%20Summary#contact" class="btn btn-primary">Discuss a similar project</a>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/site.js"></script>
 </body>
 </html>
