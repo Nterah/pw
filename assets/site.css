@@ -17,6 +17,28 @@
   --shadow:0 6px 20px rgba(0,0,0,.35);
 }
 
+/* === Bridge your tokens to Bootstrap variables (light + dark) === */
+:root, [data-theme="dark"]{
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-heading-color: var(--secondary);
+  --bs-secondary-color: var(--muted);
+  --bs-tertiary-bg: var(--surface);
+  --bs-card-bg: var(--surface);
+  --bs-card-color: var(--text);
+  --bs-link-color: var(--secondary);
+  --bs-link-hover-color: var(--primary);
+  --bs-navbar-color: var(--muted);
+  --bs-navbar-hover-color: var(--primary);
+}
+
+/* Safety nets (keeps Bootstrap pieces in sync with your theme) */
+body{ background: var(--bs-body-bg); color: var(--bs-body-color); }
+.card{ background: var(--bs-card-bg); color: var(--bs-card-color); }
+.navbar{ background: var(--bs-tertiary-bg)!important; color: var(--bs-navbar-color); }
+.dropdown-menu,.offcanvas,.modal-content{ background: var(--bs-tertiary-bg); color: var(--bs-body-color); }
+
+
 html,body{scroll-behavior:smooth;}
 body{ font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text); background:var(--bg); padding-top:80px; }
@@ -84,3 +106,4 @@ section[id]{ scroll-margin-top: 90px; }
 
 /* Utilities */
 .text-muted{ color:var(--muted)!important; }
+
