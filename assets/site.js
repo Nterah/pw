@@ -58,3 +58,19 @@ window.addEventListener('DOMContentLoaded', () => {
 .logo-dark{ display:none; }
 [data-theme="dark"] .logo-light{ display:none; }
 [data-theme="dark"] .logo-dark{ display:inline-block; }
+
+
+/* Contact form colors that respect theme */
+.contact .form-wrapper{ background: var(--surface); color: var(--text); }
+.contact .form-label{ color: var(--text); }
+.contact .form-control, .contact .form-select{
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(36,48,65,.15);
+}
+.contact .form-control::placeholder{ color: var(--muted); }
+
+/* If any element forces white, neutralize in dark mode */
+[data-theme="dark"] .bg-white{ background: var(--surface)!important; }
+[data-theme="dark"] .text-dark{ color: var(--text)!important; }
+
