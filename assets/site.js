@@ -1,57 +1,62 @@
-// Apply saved theme before paint
-(function(){
-  const t = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', t);
-})();
+/* ===== Theme tokens ===== */
+:root{
+  --primary:#ff7a8a;
+  --primary-700:#e15f71;
+  --secondary:#5b7da8;
+  --accent:#f6c85f;
 
-function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-window.toggleTheme = function(){
-  const next = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
-  setTheme(next);
-};
+  --bg:#f7f9fc;
+  --surface:#ffffff;
+  --text:#243041;
+  --muted:#5f6e84;
 
-// Init helpers after DOM loads
-window.addEventListener('DOMContentLoaded', () => {
-  if (window.bootstrap){
-    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
-  }
+  --shadow:0 6px 20px rgba(20,35,60,.08);
+}
+[data-theme="dark"]{
+  --bg:#0f1722;
+  --surface:#111b2a;
+  --text:#e6eefc;
+  --muted:#a8b3c7;
+  --shadow:0 6px 20px rgba(0,0,0,.35);
+}
 
-  // Smooth scroll + active nav
-  const links = document.querySelectorAll('.nav-link[href^="#"]');
-  links.forEach(link => link.addEventListener('click', e => {
-    const id = link.getAttribute('href').slice(1);
-    const target = document.getElementById(id);
-    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
-  }));
-  const sections = [...document.querySelectorAll('section[id]')];
-  if (sections.length){
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
-          if (link) link.classList.add('active');
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
-    sections.forEach(s => obs.observe(s));
-  }
+/* === Bridge tokens to Bootstrap so dark mode affects ALL text === */
+:root, [data-theme="dark"]{
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-heading-color: var(--secondary);
+  --bs-secondary-color: var(--muted);
+  --bs-tertiary-bg: var(--surface);
+  --bs-card-bg: var(--surface);
+  --bs-card-color: var(--text);
+  --bs-link-color: var(--secondary);
+  --bs-link-hover-color: var(--primary);
+  --bs-navbar-color: var(--muted);
+  --bs-navbar-hover-color: var(--primary);
+}
 
-  // Prefill contact form from ?ref= & ?title=
-  const params = new URLSearchParams(window.location.search);
-  const ref = params.get('ref');
-  const title = params.get('title');
-  if (ref && document.querySelector('#contact')) {
-    const textarea = document.querySelector('#contact textarea[name="message"]');
-    if (textarea) {
-      const label = title ? `Project interest: ${title}` : `Project interest: ${ref.replace(/-/g,' ')}`;
-      const existing = textarea.value.trim();
-      textarea.value = `[${label}]` + (existing ? `\n\n${existing}` : '\n\n');
-      textarea.focus();
-    }
-  }
-});
+body{
+  background:var(--bs-body-bg);
+  color:var(--bs-body-color);
+  font-family: "Inter", system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  padding-top:80px;
+}
+.card{ background:var(--bs-card-bg); color:var(--bs-card-color); }
+.navbar{ background:var(--bs-tertiary-bg)!important; color:var(--bs-navbar-color); box-shadow:var(--shadow); }
+.dropdown-menu,.offcanvas,.modal-content{ background:var(--bs-tertiary-bg); color:var(--bs-body-color); }
 
+/* Safety nets against stray utility classes */
+[data-theme="dark"] .text-dark{ color:var(--text)!important; }
+[data-theme="dark"] .bg-white{ background:var(--surface)!important; }
+
+/* ===== Navbar ===== */
+.navbar-brand{ font-weight:800; color:var(--secondary)!important; }
+.nav-link{ color:var(--muted)!important; font-weight:600; position:relative; }
+.nav-link:hover,.nav-link:focus{ color:var(--primary)!important; }
+.nav-link.active{ color:var(--primary)!important; }
+.nav-link.active::after{ content:""; position:absolute; left:8px; right:8px; bottom:-10px; height:3px; border-radius:3px; background:var(--primary); }
+.theme-toggle{ border:0; background:transparent; color:var(--muted); font-size:1.2rem; }
+.theme-toggle:hover{ color:var(--primary); }
 
 /* Navbar logo swap for themes */
 .brand-logo{ width:28px; height:28px; display:inline-block; }
@@ -59,8 +64,39 @@ window.addEventListener('DOMContentLoaded', () => {
 [data-theme="dark"] .logo-light{ display:none; }
 [data-theme="dark"] .logo-dark{ display:inline-block; }
 
+/* ===== Hero ===== */
+.hero{ padding:48px 0 28px 0; }
+.hero .title{ font-weight:800; color:var(--secondary); }
+.btn-primary{ background:var(--primary); border-color:var(--primary); }
+.btn-primary:hover{ background:var(--primary-700); border-color:var(--primary-700); }
+.btn-outline{ border:2px solid var(--secondary); color:var(--secondary); }
+.btn-outline:hover{ background:var(--secondary); color:#fff; }
+.hero-photo-wrap{ padding:8px; border-radius:24px;
+  background: radial-gradient(520px 360px at 65% 35%, rgba(255,122,138,.18), transparent 65%); }
+.about-img{ width:100%; max-width:360px; height:auto; border-radius:16px; box-shadow:var(--shadow); }
+@media (min-width:1200px){ .about-img{ max-width:420px; } }
 
-/* Contact form colors that respect theme */
+/* ===== About ===== */
+.about-section p{ text-align:justify; text-justify:inter-word; hyphens:auto; color:var(--muted); line-height:1.75; }
+.section-title{ font-weight:800; color:var(--secondary); letter-spacing:.3px; }
+
+/* ===== Cards / images ===== */
+.card{ border:0; border-radius:16px; transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover{ transform:translateY(-4px); box-shadow:0 10px 28px rgba(20,35,60,.12); }
+.card .fw-bold{ color:var(--secondary); }
+.card .card-text{ color:var(--muted); }
+
+/* Project images keep aspect ratio */
+.project-img{ display:block; width:100%; height:auto; object-fit:contain; }
+.project-img-bg{ border-top-left-radius:16px; border-top-right-radius:16px; }
+
+/* Skill icons never crop or tint */
+.skill-card .card-img-top{ max-height:64px; width:auto; object-fit:contain; margin-top:4px; }
+.skill-card img{ max-width:100%; filter:none; }
+
+/* ===== Contact (gradient) ===== */
+.contact{ background: linear-gradient(135deg, var(--secondary), var(--primary)); color:#fff; }
+.contact .meta{ color:rgba(255,255,255,.9); }
 .contact .form-wrapper{ background: var(--surface); color: var(--text); }
 .contact .form-label{ color: var(--text); }
 .contact .form-control, .contact .form-select{
@@ -70,7 +106,8 @@ window.addEventListener('DOMContentLoaded', () => {
 }
 .contact .form-control::placeholder{ color: var(--muted); }
 
-/* If any element forces white, neutralize in dark mode */
-[data-theme="dark"] .bg-white{ background: var(--surface)!important; }
-[data-theme="dark"] .text-dark{ color: var(--text)!important; }
+/* Carousel */
+.carousel-item img{ width:100%; height:auto; border-radius:12px; }
 
+/* Section anchor offset with fixed header */
+section[id]{ scroll-margin-top: 90px; }
