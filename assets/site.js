@@ -1,26 +1,28 @@
-// Persisted theme
+// Apply saved theme before paint
 (function(){
   const t = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', t);
 })();
 
 function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-window.toggleTheme = function(){ setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'); };
+window.toggleTheme = function(){
+  const next = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+  setTheme(next);
+};
 
-// Init helpers
+// Init helpers after DOM loads
 window.addEventListener('DOMContentLoaded', () => {
   if (window.bootstrap){
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
   }
 
-  // Smooth scroll + active link
+  // Smooth scroll + active nav
   const links = document.querySelectorAll('.nav-link[href^="#"]');
   links.forEach(link => link.addEventListener('click', e => {
     const id = link.getAttribute('href').slice(1);
     const target = document.getElementById(id);
     if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
   }));
-
   const sections = [...document.querySelectorAll('section[id]')];
   if (sections.length){
     const obs = new IntersectionObserver((entries) => {
@@ -35,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     sections.forEach(s => obs.observe(s));
   }
 
-  // --- Prefill contact form from ?ref= & ?title= ---
+  // Prefill contact form from ?ref= & ?title=
   const params = new URLSearchParams(window.location.search);
   const ref = params.get('ref');
   const title = params.get('title');
