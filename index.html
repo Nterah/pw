@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ntembeko Zifuku — Engineering, Operations & Data</title>
   <meta name="description" content="MBA with 20+ years blending engineering, operations, and analytics. I build dashboards, automations, and BI that drive measurable outcomes.">
+
   <!-- Apply saved theme BEFORE paint -->
   <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
 
-  <!-- Favicons -->
-  <link rel="icon" href="assets/favicon.ico?v=2">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=2">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=2">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+  <!-- Favicons (root pages) -->
+  <link rel="icon" href="assets/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=3">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
   <meta name="theme-color" content="#5b7da8">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,14 +26,19 @@
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">My Portfolio</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/logo-primary.png" alt="NZ" class="brand-logo logo-light me-2">
+        <img src="assets/logo-alt.png"     alt="NZ" class="brand-logo logo-dark  me-2">
+        My Portfolio
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="d-flex d-lg-none">
-        <button class="theme-toggle me-2" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+        <button class="theme-toggle ms-2" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
       </div>
 
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -76,25 +82,20 @@
   <section id="about" class="about-section container my-5">
     <h2 class="section-title">About</h2>
     <p>
-      With over two decades of experience, I have built a career that seamlessly blends engineering, business
-      management, and data analytics. As the Managing Director of my own consulting engineering firm, I have led
-      high-impact projects, overseen business operations, and driven strategic decision-making. My expertise
-      extends across project management, stakeholder engagement, and business intelligence, equipping me with a
-      well-rounded skill set that delivers results.
+      With over two decades of experience, I have built a career that seamlessly blends engineering,
+      business management, and data analytics. As the Managing Director of my own consulting engineering
+      firm, I have led high-impact projects, overseen business operations, and driven strategic decision-making.
+      My expertise spans project management, stakeholder engagement, and business intelligence.
     </p>
     <p>
-      My passion for data analytics began in the late 2000s, with Excel as my first tool of choice. In 2012, I
-      created my first analytics project, and ever since I have continuously leveraged data to optimize processes,
-      uncover insights, and enhance decision-making. Over the years, I have naturally gravitated towards
-      data-driven problem-solving, integrating Excel, Power Query, VBA, SQL, Python, and business intelligence
-      tools into my workflow.
+      My passion for data analytics began in the late 2000s, with Excel as my first tool of choice.
+      Since then, I’ve integrated Excel, Power Query, VBA, SQL, Python, and BI tools into my workflow to
+      uncover insights, optimize processes, and support better decisions.
     </p>
     <p>
-      Armed with a Master’s in Business Administration (MBA) and a strong technical foundation, I am committed to
-      delivering high-quality data analysis solutions. Whether it’s automating reports, analyzing trends, or
-      developing interactive dashboards, my goal is to provide actionable insights that drive business success.
+      Armed with an MBA and a strong technical foundation, I deliver reliable analysis, automation, and
+      dashboards that turn data into measurable business outcomes. Let’s collaborate. 🚀
     </p>
-    <p>Let’s collaborate to turn data into meaningful strategies and measurable impact. 🚀</p>
   </section>
 
   <!-- PROJECTS -->
@@ -105,10 +106,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/road-surface-drainage.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/1.png" class="card-img-top project-img img-fluid" alt="Road surface drainage">
+            <img loading="lazy" src="images/projects/1.png" class="card-img-top project-img" alt="Road surface drainage">
             <div class="card-body">
               <h5 class="fw-bold">Road Surface Drainage</h5>
-              <p class="card-text">Analyzing drainage efficiency for road surfaces using Python and GIS software.</p>
+              <p class="card-text">Analyzing drainage efficiency for road surfaces using Python and GIS.</p>
             </div>
           </div>
         </a>
@@ -117,10 +118,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/invoicing-summary.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/2.png" class="card-img-top project-img img-fluid" alt="Invoicing summary">
+            <img loading="lazy" src="images/projects/2.png" class="card-img-top project-img" alt="Invoicing summary">
             <div class="card-body">
               <h5 class="fw-bold">Invoicing Summary</h5>
-              <p class="card-text">Automating invoice sorting & statement generation with Excel VBA and Power Query.</p>
+              <p class="card-text">Invoice sorting & statements automated with Excel VBA + Power Query.</p>
             </div>
           </div>
         </a>
@@ -129,10 +130,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/leave-management.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/3.png" class="card-img-top project-img img-fluid" alt="Leave management">
+            <img loading="lazy" src="images/projects/3.png" class="card-img-top project-img" alt="Leave management">
             <div class="card-body">
               <h5 class="fw-bold">Leave Management System</h5>
-              <p class="card-text">Google Sheets + Apps Script tool for requests, approvals, calendars, and reports.</p>
+              <p class="card-text">Apps Script workflow for requests, approvals, calendars, and reports.</p>
             </div>
           </div>
         </a>
@@ -141,10 +142,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/cvtailorview.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/4.png" class="card-img-top project-img img-fluid" alt="CVTailorView">
+            <img loading="lazy" src="images/projects/4.png" class="card-img-top project-img" alt="CVTailorView">
             <div class="card-body">
               <h5 class="fw-bold">CVTailorView</h5>
-              <p class="card-text">ReactJS app for CVs, projects, roles & exports with advanced search/reporting.</p>
+              <p class="card-text">React app for CVs, projects, roles & exports with advanced search.</p>
             </div>
           </div>
         </a>
@@ -153,10 +154,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/qualipro.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/5.png" class="card-img-top project-img img-fluid" alt="QualiPro">
+            <img loading="lazy" src="images/projects/5.png" class="card-img-top project-img" alt="QualiPro">
             <div class="card-body">
               <h5 class="fw-bold">QualiPro</h5>
-              <p class="card-text">ISO-aligned project quality planning tool with risks, milestones and metrics.</p>
+              <p class="card-text">ISO-aligned project quality planning; risks, milestones, metrics.</p>
             </div>
           </div>
         </a>
@@ -165,10 +166,10 @@
       <div class="col-md-4">
         <a class="text-decoration-none" href="projects/provisio.html">
           <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/6.png" class="card-img-top project-img img-fluid" alt="ProVisio dashboard">
+            <img loading="lazy" src="images/projects/6.png" class="card-img-top project-img" alt="ProVisio dashboard">
             <div class="card-body">
               <h5 class="fw-bold">ProVisio</h5>
-              <p class="card-text">Business management dashboard for projects, timesheets, invoicing and budgets.</p>
+              <p class="card-text">Business dashboards for projects, timesheets, invoicing, budgets.</p>
             </div>
           </div>
         </a>
@@ -182,7 +183,6 @@
     <h2 class="section-title text-center">Skills</h2>
     <div class="row g-4 mt-2">
 
-      <!-- Each logo: never cropped; color preserved -->
       <div class="col-md-3 col-sm-6">
         <div class="card skill-card h-100 p-3">
           <img loading="lazy" src="images/skills/1.png" class="card-img-top mx-auto d-block" alt="Python">
@@ -199,7 +199,7 @@
           <img loading="lazy" src="images/skills/2.png" class="card-img-top mx-auto d-block" alt="Data Visualization">
           <div class="card-body">
             <h5 class="fw-bold">Data Visualization</h5>
-            <p class="card-text">Interactive dashboards and visual reports (Power BI, Tableau).</p>
+            <p class="card-text">Interactive reports and dashboards (Power BI, Tableau).</p>
             <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
           </div>
         </div>
@@ -221,7 +221,7 @@
           <img loading="lazy" src="images/skills/4.png" class="card-img-top mx-auto d-block" alt="Data Storytelling">
           <div class="card-body">
             <h5 class="fw-bold">Data Storytelling</h5>
-            <p class="card-text">Compelling narratives that move decisions forward.</p>
+            <p class="card-text">Clear narratives that move decisions forward.</p>
             <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
           </div>
         </div>
@@ -232,7 +232,7 @@
           <img loading="lazy" src="images/skills/5.png" class="card-img-top mx-auto d-block" alt="Excel & VBA">
           <div class="card-body">
             <h5 class="fw-bold">Excel & VBA</h5>
-            <p class="card-text">Advanced formulas, pivots, VBA automation, dynamic reporting.</p>
+            <p class="card-text">Advanced formulas, pivots, automation, dynamic reporting.</p>
             <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
           </div>
         </div>
@@ -265,7 +265,7 @@
           <img loading="lazy" src="images/skills/8.png" class="card-img-top mx-auto d-block" alt="Web Scraping">
           <div class="card-body">
             <h5 class="fw-bold">Web Scraping</h5>
-            <p class="card-text">BeautifulSoup & Selenium for structured/unstructured data extraction.</p>
+            <p class="card-text">BeautifulSoup & Selenium for structured/unstructured data.</p>
             <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
           </div>
         </div>
@@ -281,7 +281,8 @@
 
       <div class="row justify-content-center mb-4">
         <div class="col-lg-7">
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="text-start bg-white p-4 rounded-3 shadow-sm">
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+                class="text-start form-wrapper p-4 rounded-3 shadow-sm">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Name</label>
@@ -335,5 +336,3 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
-
-
