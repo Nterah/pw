@@ -4,7 +4,15 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QualiPro — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ff7a8a" offset="0"/><stop stop-color="%23f6c85f" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><text x="50%" y="50%" dy="0.3em" text-anchor="middle" font-family="Inter,Arial" font-weight="800" font-size="26" fill="white">NZ</text></svg>'>
+
+<!-- Favicons (project pages) -->
+<link rel="icon" href="../assets/favicon.ico?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png?v=3">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
+<meta name="theme-color" content="#5b7da8">
+
+  
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../assets/site.css" rel="stylesheet">
@@ -12,7 +20,15 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="../index.html">← Back to Portfolio</a>
+    
+    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+      <!-- Light theme logo -->
+      <img src="../assets/logo-primary.png" alt="NZ" class="brand-logo logo-light me-2">
+      <!-- Dark theme logo (reversed/alternate) -->
+      <img src="../assets/logo-alt.png" alt="NZ" class="brand-logo logo-dark me-2">
+      My Portfolio
+    </a>
+    
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
@@ -88,3 +104,4 @@
 <script src="../assets/site.js"></script>
 </body>
 </html>
+
