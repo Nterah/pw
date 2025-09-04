@@ -51,3 +51,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+
+/* Navbar logo swap for themes */
+.brand-logo{ width:28px; height:28px; display:inline-block; }
+.logo-dark{ display:none; }
+[data-theme="dark"] .logo-light{ display:none; }
+[data-theme="dark"] .logo-dark{ display:inline-block; }
