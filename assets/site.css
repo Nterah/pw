@@ -34,12 +34,18 @@
   --bs-navbar-color: var(--muted);
   --bs-navbar-hover-color: var(--primary);
 }
-body{ background:var(--bs-body-bg); color:var(--bs-body-color); font-family: "Inter", system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; padding-top:80px; }
+
+body{
+  background:var(--bs-body-bg);
+  color:var(--bs-body-color);
+  font-family: "Inter", system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  padding-top:80px;
+}
 .card{ background:var(--bs-card-bg); color:var(--bs-card-color); }
 .navbar{ background:var(--bs-tertiary-bg)!important; color:var(--bs-navbar-color); box-shadow:var(--shadow); }
 .dropdown-menu,.offcanvas,.modal-content{ background:var(--bs-tertiary-bg); color:var(--bs-body-color); }
 
-/* Safety nets against stray utility classes injected by components */
+/* Safety nets against stray utility classes */
 [data-theme="dark"] .text-dark{ color:var(--text)!important; }
 [data-theme="dark"] .bg-white{ background:var(--surface)!important; }
 
@@ -51,6 +57,12 @@ body{ background:var(--bs-body-bg); color:var(--bs-body-color); font-family: "In
 .nav-link.active::after{ content:""; position:absolute; left:8px; right:8px; bottom:-10px; height:3px; border-radius:3px; background:var(--primary); }
 .theme-toggle{ border:0; background:transparent; color:var(--muted); font-size:1.2rem; }
 .theme-toggle:hover{ color:var(--primary); }
+
+/* Navbar logo swap for themes */
+.brand-logo{ width:28px; height:28px; display:inline-block; }
+.logo-dark{ display:none; }
+[data-theme="dark"] .logo-light{ display:none; }
+[data-theme="dark"] .logo-dark{ display:inline-block; }
 
 /* ===== Hero ===== */
 .hero{ padding:48px 0 28px 0; }
@@ -74,26 +86,25 @@ body{ background:var(--bs-body-bg); color:var(--bs-body-color); font-family: "In
 .card .fw-bold{ color:var(--secondary); }
 .card .card-text{ color:var(--muted); }
 
-/* Project cover images must keep aspect ratio */
-.project-img{ display:block; width:100%; max-width:100%; height:auto; }
-.project-img-bg{ background:linear-gradient(180deg, rgba(91,125,168,.06), rgba(255,255,255,0));
-                 border-top-left-radius:16px; border-top-right-radius:16px; }
+/* Project images keep aspect ratio */
+.project-img{ display:block; width:100%; height:auto; object-fit:contain; }
+.project-img-bg{ border-top-left-radius:16px; border-top-right-radius:16px; }
 
-/* Skill icons must never crop or tint */
-.skill-card .card-img-top{ height:64px; width:auto; object-fit:contain; margin-top:4px; }
+/* Skill icons never crop or tint */
+.skill-card .card-img-top{ max-height:64px; width:auto; object-fit:contain; margin-top:4px; }
 .skill-card img{ max-width:100%; filter:none; }
 
 /* ===== Contact (gradient) ===== */
 .contact{ background: linear-gradient(135deg, var(--secondary), var(--primary)); color:#fff; }
-.contact .form-control, .contact .form-select{ background:#fff; color:#111; }
-.contact .form-label{ color:#001; }
 .contact .meta{ color:rgba(255,255,255,.9); }
-[data-theme="dark"] .contact .form-control{ background:#f2f4f7; color:#111; }
-
-/* Social icons keep their original colors */
-.social-btn{ width:44px; height:44px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center;
-             background:var(--surface); border:1px solid rgba(36,48,65,.08); box-shadow:var(--shadow); }
-.social-btn img{ width:22px; height:22px; filter:none; }
+.contact .form-wrapper{ background: var(--surface); color: var(--text); }
+.contact .form-label{ color: var(--text); }
+.contact .form-control, .contact .form-select{
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(36,48,65,.15);
+}
+.contact .form-control::placeholder{ color: var(--muted); }
 
 /* Carousel */
 .carousel-item img{ width:100%; height:auto; border-radius:12px; }
