@@ -86,3 +86,12 @@ body{
 /* Utilities */
 .btn-primary{ background:var(--primary); border-color:var(--primary); }
 .btn-outline{ border:1px solid var(--border); color:var(--text); }
+
+
+
+/* Brand logo sizing */
+.navbar-brand .brand-logo{
+  width:28px; height:28px; border-radius:50%;
+  margin-right:.5rem; vertical-align:middle;
+}
+.navbar-brand span{ vertical-align:middle; }
