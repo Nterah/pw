@@ -45,10 +45,19 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/logo-primary.png" alt="NZ" class="brand-logo logo-light">
-        <img src="assets/logo-alt.png"     alt="NZ" class="brand-logo logo-dark">
-        My Portfolio
+        <!-- Transparent, theme-aware brand mark -->
+        <svg class="brand-mark" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+          <!-- outer ring takes navbar (currentColor), no fill -->
+          <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/>
+          <!-- bold NZ in currentColor, with a halo equal to page background for contrast -->
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle"
+                font-family="Inter, Arial Black, Arial, sans-serif"
+                font-size="28" font-weight="900"
+                fill="currentColor" stroke="var(--bg)" stroke-width="3" paint-order="stroke">NZ</text>
+        </svg>
+        <span>My Portfolio</span>
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -346,4 +355,5 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
+
 
