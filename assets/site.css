@@ -111,3 +111,64 @@ body{
 
 /* Section anchor offset with fixed header */
 section[id]{ scroll-margin-top: 90px; }
+
+
+/* ===== Navbar logos (light/dark swap) ===== */
+.brand-logo{ width:36px; height:36px; display:inline-block; object-fit:contain; }
+.logo-dark{ display:none; }                 /* hidden by default */
+[data-theme="dark"] .logo-light{ display:none; }
+[data-theme="dark"] .logo-dark{ display:inline-block; }
+
+/* Fallback: if you only keep one <img>, add class "logo-invert" to it */
+[data-theme="dark"] .logo-invert{ filter: invert(1) brightness(190%); }
+
+/* Add subtle contrast so small logos don't feel faint */
+.brand-logo{ filter: drop-shadow(0 1px 0 rgba(0,0,0,.15)); }
+[data-theme="dark"] .brand-logo{ filter: drop-shadow(0 1px 0 rgba(255,255,255,.08)); }
+
+/* ===== Social icons ===== */
+.social-list{ display:flex; gap:12px; align-items:center; justify-content:center; }
+.social-link{
+  width:44px; height:44px; border-radius:999px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background: var(--surface);
+  border: 1px solid rgba(36,48,65,.15);
+  box-shadow: var(--shadow);
+  transition: transform .15s ease;
+}
+.social-link:hover{ transform: translateY(-2px); }
+[data-theme="dark"] .social-link{ background:#0f1722; border-color: rgba(255,255,255,.12); }
+.social-link img{ width:22px; height:22px; object-fit:contain; filter:none; }
+
+/* ===== Contact section fixes ===== */
+.contact{ background: linear-gradient(135deg, var(--secondary), var(--primary)); }
+.contact h2{ color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,.35); }
+.form-wrapper{
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(36,48,65,.15);
+}
+.form-wrapper .form-label{ color: var(--text); }
+.form-wrapper .form-control, .form-wrapper .form-select{
+  background: var(--surface);
+  color: var(--text);
+  border-color: rgba(36,48,65,.25);
+}
+.form-wrapper .form-control::placeholder{ color: var(--muted); }
+[data-theme="dark"] .form-wrapper{
+  background: #111b2a;
+  border-color: rgba(255,255,255,.12);
+}
+[data-theme="dark"] .form-wrapper .form-control,
+[data-theme="dark"] .form-wrapper .form-select{
+  background: #0f1722;
+  color: var(--text);
+  border-color: rgba(255,255,255,.18);
+}
+[data-theme="dark"] .form-wrapper .form-control::placeholder{ color:#9fb0c8; }
+
+/* Safety nets (some utilities force white/dark) */
+[data-theme="dark"] .bg-white{ background: var(--surface)!important; }
+[data-theme="dark"] .text-dark{ color: var(--text)!important; }
+
+
