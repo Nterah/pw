@@ -1,55 +1,19 @@
-// Set saved theme BEFORE paint (reduces flash)
-(function(){
+// Ensure the selected theme is applied and remembered
+(function initTheme() {
   const t = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', t);
+  setTheme(t);
 })();
 
-function setTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-window.toggleTheme = function(){
-  const next = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
-  setTheme(next);
-};
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
 
-window.addEventListener('DOMContentLoaded', () => {
-  // Tooltips
-  if (window.bootstrap){
-    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
-  }
+  // brand logo (same transparent PNG for both themes)
+  const brand = document.getElementById('brandLogo');
+  if (brand) brand.src = 'icons/nterah-logo-64.png';
+}
 
-  // Smooth scroll for on-page nav links
-  document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const id = link.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
-    });
-  });
-
-  // Active nav indicator as you scroll
-  const sections = [...document.querySelectorAll('section[id]')];
-  if (sections.length){
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
-          if (link) link.classList.add('active');
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
-    sections.forEach(s => obs.observe(s));
-  }
-
-  // Prefill contact form from ?ref= & ?title=
-  const params = new URLSearchParams(window.location.search);
-  const ref = params.get('ref');
-  const title = params.get('title');
-  if (ref) {
-    const textarea = document.querySelector('#contact textarea[name="message"]') || document.querySelector('textarea[name="message"]');
-    if (textarea) {
-      const label = title ? `Project interest: ${title}` : `Project interest: ${ref.replace(/-/g,' ')}`;
-      const existing = textarea.value.trim();
-      textarea.value = `[${label}]` + (existing ? `\n\n${existing}` : '\n\n');
-    }
-  }
-});
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}
