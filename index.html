@@ -24,4 +24,326 @@
 
   <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="style
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/site.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img id="brandLogo" src="icons/nterah-logo-64.png" width="28" height="28" alt="Ntembeko Zifuku logo">
+        <span>My Portfolio</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-flex d-lg-none">
+        <button class="theme-toggle me-2" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle d-none d-lg-inline" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="title mb-2">Engineering + Data to unlock decisions</h1>
+          <p class="text-muted mb-4">
+            MBA with 20+ years blending engineering, operations, and analytics. I build dashboards,
+            automations, and BI that ship measurable business outcomes.
+          </p>
+          <div class="d-flex gap-2">
+            <a class="btn btn-primary" href="#contact">Book a call</a>
+            <a class="btn btn-outline" href="#projects">See my work</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div class="hero-photo-wrap">
+            <img src="images/about/about_pic.jpg" class="about-img" alt="Portrait of Ntembeko Zifuku">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section container my-5">
+    <h2 class="section-title">About</h2>
+    <p>
+      With over two decades of experience, I have built a career that seamlessly blends engineering, business
+      management, and data analytics. As the Managing Director of my own consulting engineering firm, I have led
+      high-impact projects, overseen business operations, and driven strategic decision-making. My expertise
+      extends across project management, stakeholder engagement, and business intelligence, equipping me with a
+      well-rounded skill set that delivers results.
+    </p>
+    <p>
+      My passion for data analytics began in the late 2000s, with Excel as my first tool of choice. In 2012, I
+      created my first analytics project, and ever since I have continuously leveraged data to optimize processes,
+      uncover insights, and enhance decision-making. Over the years, I have naturally gravitated towards
+      data-driven problem-solving, integrating Excel, Power Query, VBA, SQL, Python, and business intelligence
+      tools into my workflow.
+    </p>
+    <p>
+      Armed with a Master’s in Business Administration (MBA) and a strong technical foundation, I am committed to
+      delivering high-quality data analysis solutions. Whether it’s automating reports, analyzing trends, or
+      developing interactive dashboards, my goal is to provide actionable insights that drive business success.
+    </p>
+    <p>Let’s collaborate to turn data into meaningful strategies and measurable impact. 🚀</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container my-5">
+    <h2 class="section-title text-center">Projects</h2>
+    <div class="row g-4 mt-2">
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/road-surface-drainage.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/1.png" class="card-img-top project-img" alt="Road surface drainage">
+            <div class="card-body">
+              <h5 class="fw-bold">Road Surface Drainage</h5>
+              <p class="card-text">Analyzing drainage efficiency for road surfaces using Python and GIS software.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/invoicing-summary.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/2.png" class="card-img-top project-img" alt="Invoicing summary">
+            <div class="card-body">
+              <h5 class="fw-bold">Invoicing Summary</h5>
+              <p class="card-text">Automating invoice sorting & statement generation with Excel VBA and Power Query.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/leave-management.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/3.png" class="card-img-top project-img" alt="Leave management">
+            <div class="card-body">
+              <h5 class="fw-bold">Leave Management System</h5>
+              <p class="card-text">Google Sheets + Apps Script tool for requests, approvals, calendars, and reports.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/cvtailorview.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/4.png" class="card-img-top project-img" alt="CVTailorView">
+            <div class="card-body">
+              <h5 class="fw-bold">CVTailorView</h5>
+              <p class="card-text">ReactJS app for CVs, projects, roles & exports with advanced search/reporting.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/qualipro.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/5.png" class="card-img-top project-img" alt="QualiPro">
+            <div class="card-body">
+              <h5 class="fw-bold">QualiPro</h5>
+              <p class="card-text">ISO-aligned project quality planning tool with risks, milestones and metrics.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a class="text-decoration-none" href="projects/provisio.html">
+          <div class="card h-100 project-img-bg">
+            <img loading="lazy" src="images/projects/6.png" class="card-img-top project-img" alt="ProVisio dashboard">
+            <div class="card-body">
+              <h5 class="fw-bold">ProVisio</h5>
+              <p class="card-text">Business management dashboard for projects, timesheets, invoicing and budgets.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container my-5">
+    <h2 class="section-title text-center">Skills</h2>
+    <div class="row g-4 mt-2">
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/1.png" class="card-img-top mx-auto d-block" alt="Python">
+          <div class="card-body">
+            <h5 class="fw-bold">Python</h5>
+            <p class="card-text">Pandas, NumPy, data cleaning, EDA, automation integrations.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/2.png" class="card-img-top mx-auto d-block" alt="Data Visualization">
+          <div class="card-body">
+            <h5 class="fw-bold">Data Visualization</h5>
+            <p class="card-text">Interactive dashboards and visual reports (Power BI, Tableau).</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/3.png" class="card-img-top mx-auto d-block" alt="SQL">
+          <div class="card-body">
+            <h5 class="fw-bold">SQL</h5>
+            <p class="card-text">Querying, optimization, large dataset wrangling.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/4.png" class="card-img-top mx-auto d-block" alt="Data Storytelling">
+          <div class="card-body">
+            <h5 class="fw-bold">Data Storytelling</h5>
+            <p class="card-text">Compelling narratives that move decisions forward.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/5.png" class="card-img-top mx-auto d-block" alt="Excel & VBA">
+          <div class="card-body">
+            <h5 class="fw-bold">Excel & VBA</h5>
+            <p class="card-text">Advanced formulas, pivots, VBA automation, dynamic reporting.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/6.png" class="card-img-top mx-auto d-block" alt="Power Query">
+          <div class="card-body">
+            <h5 class="fw-bold">Power Query</h5>
+            <p class="card-text">ETL, multi-source merges, robust data prep, automation.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/7.png" class="card-img-top mx-auto d-block" alt="HTML & CSS">
+          <div class="card-body">
+            <h5 class="fw-bold">HTML & CSS</h5>
+            <p class="card-text">Clean, responsive UI for sites and web apps.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card skill-card h-100 p-3">
+          <img loading="lazy" src="images/skills/8.png" class="card-img-top mx-auto d-block" alt="Web Scraping">
+          <div class="card-body">
+            <h5 class="fw-bold">Web Scraping</h5>
+            <p class="card-text">BeautifulSoup & Selenium for structured/unstructured data extraction.</p>
+            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Contact Me</h2>
+
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-7">
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="text-start form-wrapper p-4 rounded-3 shadow-sm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input required name="name" type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input required name="_replyto" type="email" class="form-control" placeholder="you@example.com">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea required name="message" rows="4" class="form-control" placeholder="How can I help?"></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Inline SVG (no external files needed) -->
+      <div class="row justify-content-center my-3 meta">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" class="me-2"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+          <span class="mb-0">nterah@gmail.com</span>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center mt-3 mt-md-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" class="me-2"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.1-.3 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .8-.3 1.1l-2.2 2.1Z"/></svg>
+          <span class="mb-0">+27 84 410 4394</span>
+        </div>
+      </div>
+
+      <div class="social-list mt-3" role="list" aria-label="Social links">
+        <a class="social-link" href="https://www.linkedin.com/in/ntembeko-zifuku" target="_blank" aria-label="LinkedIn">
+          <img class="social-icon" src="icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a class="social-link" href="https://x.com/NtembekoZifuku" target="_blank" aria-label="X / Twitter">
+          <img class="social-icon" src="icons/X.png" alt="X">
+        </a>
+        <a class="social-link" href="https://github.com/Nterah" target="_blank" aria-label="GitHub">
+          <img class="social-icon" src="icons/github.png" alt="GitHub">
+        </a>
+        <a class="social-link" href="https://wa.me/27844104394" target="_blank" aria-label="WhatsApp">
+          <img class="social-icon" src="icons/WhatsApp.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
