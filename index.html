@@ -5,34 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ntembeko Zifuku — Engineering, Operations & Data</title>
   <meta name="description" content="MBA with 20+ years blending engineering, operations, and analytics. I build dashboards, automations, and BI that drive measurable outcomes.">
+
   <!-- Apply saved theme BEFORE paint -->
-  <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
+  <script>
+    (function () {
+      const t = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
 
-    <!-- FAVICONS (bold, transparent SVG + fallbacks) -->
-    <link rel="icon" type="image/svg+xml"
-          href='data:image/svg+xml;utf8,
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-      <defs>
-        <style>
-          text{font:900 30px "Inter", "Arial Black", Arial, sans-serif}
-        </style>
-      </defs>
-      <!-- transparent background -->
-      <circle cx="32" cy="32" r="29" fill="none" stroke="black" stroke-width="4"/>
-      <!-- bold monogram with a small outline to stay crisp on any tab color -->
-      <text x="50%" y="50%" dy=".35em" text-anchor="middle"
-            fill="black" stroke="white" stroke-width="2" paint-order="stroke">NZ</text>
-    </svg>'>
-    <!-- Optional PNG fallbacks if you already have them -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="mask-icon" href="data:image/svg+xml;utf8,
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="29" fill="#000"/>
-      <path fill="#000" d="M20 45V20h6l12 19V20h6v25h-6L26 26v19z"/>
-    </svg>' color="#5b7da8">
-
+  <!-- FAVICONS: transparent, bold NZ (no background), valid quoting -->
+  <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><style>text{font:900 30px "Inter","Arial Black",Arial,sans-serif}</style></defs><circle cx="32" cy="32" r="29" fill="none" stroke="black" stroke-width="4"/><text x="50%" y="50%" dy=".35em" text-anchor="middle" fill="black" stroke="white" stroke-width="2" paint-order="stroke">NZ</text></svg>'>
+  <!-- Optional PNG fallbacks if you have them in /assets -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <!-- NOTE: removed <link rel="mask-icon"> that printed stray text -->
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -44,12 +33,12 @@
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.html" aria-label="Home">
         <!-- Transparent, theme-aware brand mark -->
         <svg class="brand-mark" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
-          <!-- outer ring takes navbar (currentColor), no fill -->
+          <!-- outer ring takes currentColor -->
           <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3"/>
-          <!-- bold NZ in currentColor, with a halo equal to page background for contrast -->
+          <!-- NZ with a halo using --bg so it stays readable on any bar color -->
           <text x="50%" y="50%" dy=".35em" text-anchor="middle"
                 font-family="Inter, Arial Black, Arial, sans-serif"
                 font-size="28" font-weight="900"
@@ -355,5 +344,3 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
-
-
