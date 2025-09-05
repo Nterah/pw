@@ -1,4 +1,4 @@
-// Apply saved theme before paint (safety in case this file loads first)
+// Set saved theme BEFORE paint (reduces flash)
 (function(){
   const t = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', t);
@@ -11,18 +11,21 @@ window.toggleTheme = function(){
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Bootstrap tooltips
+  // Tooltips
   if (window.bootstrap){
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
   }
 
-  // Smooth scroll + active nav
-  const links = document.querySelectorAll('.nav-link[href^="#"]');
-  links.forEach(link => link.addEventListener('click', e => {
-    const id = link.getAttribute('href').slice(1);
-    const target = document.getElementById(id);
-    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
-  }));
+  // Smooth scroll for on-page nav links
+  document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+
+  // Active nav indicator as you scroll
   const sections = [...document.querySelectorAll('section[id]')];
   if (sections.length){
     const obs = new IntersectionObserver((entries) => {
@@ -41,13 +44,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const ref = params.get('ref');
   const title = params.get('title');
-  if (ref && document.querySelector('#contact')) {
-    const textarea = document.querySelector('#contact textarea[name="message"]');
+  if (ref) {
+    const textarea = document.querySelector('#contact textarea[name="message"]') || document.querySelector('textarea[name="message"]');
     if (textarea) {
       const label = title ? `Project interest: ${title}` : `Project interest: ${ref.replace(/-/g,' ')}`;
       const existing = textarea.value.trim();
       textarea.value = `[${label}]` + (existing ? `\n\n${existing}` : '\n\n');
-      textarea.focus();
     }
   }
 });
