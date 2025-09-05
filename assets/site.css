@@ -1,13 +1,19 @@
-/* THEME TOKENS */
+/* ===== THEME TOKENS ===== */
 :root{
   --bg:#ffffff;
   --text:#1f2937;
   --muted:#6b7280;
   --heading:#3b4d6a;
   --primary:#ff7a8a;
+
   --card-bg:#ffffff;
   --border:rgba(0,0,0,.12);
   --input-bg:#ffffff;
+
+  /* Navbar */
+  --nav-bg:rgba(255,255,255,.92);
+  --nav-border:rgba(0,0,0,.08);
+  --nav-link:#1f2937;
 }
 html[data-theme="dark"]{
   --bg:#0f1822;
@@ -15,11 +21,17 @@ html[data-theme="dark"]{
   --muted:#9ca3af;
   --heading:#8ea3c4;
   --primary:#ff7a8a;
+
   --card-bg:#111a24;
   --border:rgba(255,255,255,.12);
   --input-bg:#0e1620;
+
+  --nav-bg:rgba(11,18,27,.92);
+  --nav-border:rgba(255,255,255,.08);
+  --nav-link:#e5e7eb;
 }
 
+/* ===== RESETS ===== */
 *{box-sizing:border-box}
 body{
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -27,48 +39,60 @@ body{
   color:var(--text);
   padding-top:64px; /* space for fixed navbar */
 }
+p, li{color:var(--text);}
+.text-muted{ color:var(--muted)!important; }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar{
-  background:rgba(16,23,31,.92);
+  background:var(--nav-bg);
   backdrop-filter: blur(6px);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid var(--nav-border);
 }
-.navbar-brand{ color:var(--text) !important; font-weight:800; }
-.navbar .nav-link{ color:var(--text); opacity:.9; }
-.navbar .nav-link:hover, .navbar .nav-link.active{ color:var(--heading); }
+.navbar-brand{ color:var(--nav-link)!important; font-weight:800; }
+.navbar .nav-link{
+  color:var(--nav-link);
+  opacity:.9;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active{ color:var(--heading); }
+.brand-logo{ height:28px; width:auto; display:block; border-radius:50%; }
 .theme-toggle{
   border:1px solid var(--border);
-  background:transparent; color:var(--text);
+  background:transparent; color:var(--nav-link);
   padding:.4rem .6rem; border-radius:8px;
 }
+/* make hamburger visible in dark */
+html[data-theme="dark"] .navbar-toggler-icon{ filter:invert(1); }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{ padding:72px 0 24px; }
 .title{ color:var(--heading); font-weight:800; }
-.text-muted{ color:var(--muted) !important; }
-
 .about-img{
   width:100%; max-width:420px; height:auto; object-fit:contain; border-radius:18px;
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 .hero-photo-wrap{ display:inline-block; }
 
-/* ABOUT */
-.about-section .section-title,
-#projects .section-title,
-#skills .section-title{ color:var(--heading); font-weight:800; }
+/* ===== SECTION TITLES ===== */
+.section-title{ color:var(--heading); font-weight:800; }
 .about-section p{ text-align:justify; }
 
-/* PROJECT CARDS */
+/* ===== PROJECT CARDS ===== */
+.card{ background:var(--card-bg); border:1px solid var(--border); border-radius:16px; }
 .project-img{ width:100%; height:auto; object-fit:contain; background:transparent; }
 .project-img-bg .card-body{ border-top:1px solid var(--border); }
-.card{ background:var(--card-bg); border:1px solid var(--border); border-radius:16px; }
 
-/* SKILLS */
+/* ===== PROJECT DETAIL (summary panel, back link, carousel) ===== */
+.summary-card{ background:var(--card-bg)!important; color:var(--text)!important; border:1px solid var(--border)!important; }
+.back-link{ color:var(--muted); text-decoration:none; }
+.back-link:hover{ color:var(--heading); }
+.carousel-control-next-icon,
+.carousel-control-prev-icon{ filter: invert(1) grayscale(1); opacity:.8; }
+
+/* ===== SKILLS ===== */
 .skill-card img{ width:60px; height:auto; object-fit:contain; }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 .contact{ background:linear-gradient(180deg, rgba(91,125,168,.15), rgba(255,122,138,.15)); }
 .contact h2{ color:var(--heading); }
 .form-wrapper{ background:var(--card-bg); border:1px solid var(--border); }
@@ -79,19 +103,10 @@ body{
 }
 .form-control::placeholder{ color:var(--muted); }
 
-/* SOCIALS */
+/* ===== SOCIALS ===== */
 .social-list{ display:flex; gap:16px; justify-content:center; align-items:center; }
-.social-icon{ width:28px; height:28px; display:block; }
+.social-link img{ width:28px; height:28px; display:block; }
 
-/* Utilities */
+/* ===== Buttons ===== */
 .btn-primary{ background:var(--primary); border-color:var(--primary); }
 .btn-outline{ border:1px solid var(--border); color:var(--text); }
-
-
-
-/* Brand logo sizing */
-.navbar-brand .brand-logo{
-  width:28px; height:28px; border-radius:50%;
-  margin-right:.5rem; vertical-align:middle;
-}
-.navbar-brand span{ vertical-align:middle; }
