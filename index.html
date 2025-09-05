@@ -1,67 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ntembeko Zifuku — Engineering, Operations & Data</title>
-  <meta name="description" content="MBA with 20+ years blending engineering, operations, and analytics. I build dashboards, automations, and BI that drive measurable outcomes.">
 
   <!-- Apply saved theme BEFORE paint -->
-  <script>
-    (function () {
-      const t = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
+  <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
 
-  <!-- Favicons / PWA (all from /icons) -->
-<!-- FAVICONS -->
-  <link rel="icon" href="/pw/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/pw/icons/nterah-logo-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/pw/icons/nterah-logo-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/pw/icons/nterah-logo-180.png">
-  <meta name="theme-color" content="#5b7da8">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- FAVICONS – use your new round logo file -->
+  <!-- Place these files in /icons/ : nterah-logo-32.png, nterah-logo-48.png, nterah-logo-180.png -->
+  <link rel="icon" type="image/png" sizes="48x48" href="icons/nterah-logo-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/nterah-logo-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/nterah-logo-180.png">
 
-  <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/site.css" rel="stylesheet">
+  
+  
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="brand-logo" src="/pw/icons/navbar-logo-28.png" alt="Nterah logo" width="28" height="28">
-        <span>My Portfolio</span>
-      </a>
 
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="icons/nterah-logo-48.png" alt="Ntembeko Zifuku" class="brand-logo">
+      <span>My Portfolio</span>
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="d-flex d-lg-none">
-        <button class="theme-toggle me-2" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-3">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <button class="theme-toggle d-none d-lg-inline" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-      </div>
+    <div class="d-flex d-lg-none ms-2">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
     </div>
-  </nav>
 
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle d-none d-lg-inline" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</nav>
+
+  
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="container">
@@ -349,4 +339,5 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
+
 
