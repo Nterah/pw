@@ -8,12 +8,31 @@
   <!-- Apply saved theme BEFORE paint -->
   <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
 
-  <!-- Favicons (root pages) -->
-  <link rel="icon" href="assets/favicon.ico?v=3">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=3">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=3">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
-  <meta name="theme-color" content="#5b7da8">
+    <!-- FAVICONS (bold, transparent SVG + fallbacks) -->
+    <link rel="icon" type="image/svg+xml"
+          href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <defs>
+        <style>
+          text{font:900 30px "Inter", "Arial Black", Arial, sans-serif}
+        </style>
+      </defs>
+      <!-- transparent background -->
+      <circle cx="32" cy="32" r="29" fill="none" stroke="black" stroke-width="4"/>
+      <!-- bold monogram with a small outline to stay crisp on any tab color -->
+      <text x="50%" y="50%" dy=".35em" text-anchor="middle"
+            fill="black" stroke="white" stroke-width="2" paint-order="stroke">NZ</text>
+    </svg>'>
+    <!-- Optional PNG fallbacks if you already have them -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="mask-icon" href="data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="29" fill="#000"/>
+      <path fill="#000" d="M20 45V20h6l12 19V20h6v25h-6L26 26v19z"/>
+    </svg>' color="#5b7da8">
+
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -327,3 +346,4 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
+
