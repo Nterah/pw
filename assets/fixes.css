@@ -1,0 +1,52 @@
+/* ---- Theme helpers and tiny overrides ---- */
+
+/* Make sure these exist; used by brand halo and forms */
+:root{
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --primary:#5b7da8;
+  --primary-strong:#4a6990;
+  --nav:#0f172a;
+  --panel:#ffffff;
+  --border:rgba(0,0,0,.12);
+  --social-filter:none;
+}
+html[data-theme="dark"]{
+  --bg:#0b1320;
+  --text:#e5e7eb;
+  --muted:#a1a1aa;
+  --primary:#8fb3e0;
+  --primary-strong:#a6c3e8;
+  --nav:#0b1320;
+  --panel:#0f172a;
+  --border:rgba(255,255,255,.14);
+  --social-filter:invert(1) brightness(1.2);
+}
+
+/* Navbar */
+.navbar{ background:var(--nav); box-shadow:0 2px 10px rgba(0,0,0,.25); }
+.navbar .navbar-brand, .navbar .nav-link{ color:#cbd5e1; }
+.navbar .nav-link.active, .navbar .nav-link:hover{ color:#f8fafc; }
+.navbar .navbar-toggler{ border-color:rgba(255,255,255,.25); }
+.navbar .navbar-toggler-icon{ filter:invert(1) contrast(1.2); }
+
+/* Brand logo: use your face logo, consistent size */
+.brand-logo{ width:28px; height:28px; display:inline-block; border-radius:9999px; }
+
+/* Project and skill images keep their aspect ratio */
+.project-img{ width:100%; height:auto; display:block; }
+
+/* Contact section readability */
+.contact{ background:linear-gradient(135deg,#7ea0c9,#f08a98 70%); }
+.contact-title{ color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.25); }
+.form-wrapper{ background:var(--panel); border:1px solid var(--border); color:var(--text); }
+.form-label{ color:var(--muted); }
+.form-control{ background:transparent; color:var(--text); border:1px solid var(--border); }
+.form-control::placeholder{ color:var(--muted); }
+.contact-link{ color:#fff; text-decoration:none; }
+.contact-link:hover{ text-decoration:underline; }
+
+/* Social icons: neat & small, auto-invert on dark */
+.social-list{ display:flex; gap:16px; justify-content:center; align-items:center; }
+.social-link img{ width:28px; height:28px; display:block; filter:var(--social-filter); }
