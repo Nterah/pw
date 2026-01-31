@@ -104,178 +104,242 @@
   <!-- PROJECTS -->
   <section id="projects" class="container my-5">
     <h2 class="section-title text-center">Projects</h2>
-    <div class="row g-4 mt-2">
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/road-surface-drainage.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/1.png" class="card-img-top project-img" alt="Road surface drainage">
-            <div class="card-body">
-              <h5 class="fw-bold">Road Surface Drainage</h5>
-              <p class="card-text">Analyzing drainage efficiency for road surfaces using Python and GIS software.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/invoicing-summary.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/2.png" class="card-img-top project-img" alt="Invoicing summary">
-            <div class="card-body">
-              <h5 class="fw-bold">Invoicing Summary</h5>
-              <p class="card-text">Automating invoice sorting & statement generation with Excel VBA and Power Query.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/leave-management.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/3.png" class="card-img-top project-img" alt="Leave management">
-            <div class="card-body">
-              <h5 class="fw-bold">Leave Management System</h5>
-              <p class="card-text">Google Sheets + Apps Script tool for requests, approvals, calendars, and reports.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/cvtailorview.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/4.png" class="card-img-top project-img" alt="CVTailorView">
-            <div class="card-body">
-              <h5 class="fw-bold">CVTailorView</h5>
-              <p class="card-text">ReactJS app for CVs, projects, roles & exports with advanced search/reporting.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/qualipro.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/5.png" class="card-img-top project-img" alt="QualiPro">
-            <div class="card-body">
-              <h5 class="fw-bold">QualiPro</h5>
-              <p class="card-text">ISO-aligned project quality planning tool with risks, milestones and metrics.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4">
-        <a class="text-decoration-none" href="projects/provisio.html">
-          <div class="card h-100 project-img-bg">
-            <img loading="lazy" src="images/projects/6.png" class="card-img-top project-img" alt="ProVisio dashboard">
-            <div class="card-body">
-              <h5 class="fw-bold">ProVisio</h5>
-              <p class="card-text">Business management dashboard for projects, timesheets, invoicing and budgets.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
+  
+    <!-- Grid is filled by the script below -->
+    <div id="projects-grid" class="row g-4 mt-2"></div>
   </section>
+  
+  <!-- Projects data + image fallback/rotator (paste once on index.html) -->
+  <script>
+    // 9 current projects
+    const PROJECTS = [
+      {
+        key: "cvtailorview",
+        title: "CVTailorView",
+        tags: "React • Flask • MySQL",
+        url: "https://www.cvtailorview.app",
+        folder: "images/projects/cvtailorview",
+        blurb: "Profile search, exports (Word/PDF), timeline charts, templates."
+      },
+      {
+        key: "provisio",
+        title: "ProVisio",
+        tags: "Timesheets • Invoicing • Budgets",
+        url: "https://www.provisio.app",
+        folder: "images/projects/provisio",
+        blurb: "Projects + timesheets + creditors with live dashboards."
+      },
+      {
+        key: "tams360",
+        title: "TAMS360",
+        tags: "Mobile • Assets • GIS",
+        url: "https://app.tams360.co.za/",
+        folder: "images/projects/tams360",
+        blurb: "Field asset capture, map, inspection & dashboard workflow."
+      },
+      {
+        key: "assetry",
+        title: "Assetry",
+        tags: "Registers • Renewals • GRAP",
+        url: "https://assetry.provisio.app",
+        folder: "images/projects/assetry",
+        blurb: "Lightweight asset register with geofencing & renewals."
+      },
+      {
+        key: "talentgrid",
+        title: "TalentGrid",
+        tags: "Figma System • Components",
+        url: "https://small-work-96524359.figma.site",
+        folder: "images/projects/talentgrid",
+        blurb: "Design system + job board UI flows and atomic components."
+      },
+      {
+        key: "affinity",
+        title: "Affinity",
+        tags: "Figma • App UI",
+        url: "https://ready-pepper-25801161.figma.site",
+        folder: "images/projects/affinity",
+        blurb: "Client relations & interaction tracking concepts."
+      },
+      {
+        key: "leave",
+        title: "Leave Management",
+        tags: "Google Sheets • Apps Script",
+        url: "https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing",
+        folder: "images/projects/leave-management",
+        blurb: "Requests, approvals, calendars, reports—sheet-native app."
+      },
+      {
+        key: "zimasy",
+        title: "ZiMaSy",
+        tags: "Figma • Biz Ops",
+        url: "https://rare-stoop-55686335.figma.site",
+        folder: "images/projects/zimasy",
+        blurb: "Ops dashboard & flows (replaces old Invoicing Summary)."
+      },
+      {
+        key: "qualipro",
+        title: "QualiPro",
+        tags: "ISO-aligned • Logs • Metrics",
+        url: "https://learn-public-72567702.figma.site",
+        folder: "images/projects/qualipro",
+        blurb: "Quality planning: risks, issues, audits & status logic."
+      }
+    ];
+  
+    // Try common hero names, then fall back to 1,2,... if needed
+    const HERO_NAMES = ["dashboard", "cover", "main", "hero", "0", "1"];
+    const EXTENSIONS = ["png", "jpg", "jpeg", "webp"];
+  
+    // Utility: set img.src with graceful fallbacks
+    function loadWithFallback(img, base, names, exts){
+      let i = 0, j = 0;
+      function tryNext(){
+        if (i >= names.length) { img.classList.add('d-none'); return; }
+        img.src = `${base}/${names[i]}.${exts[j]}`;
+      }
+      img.onerror = () => {
+        j++;
+        if (j >= exts.length){ j = 0; i++; }
+        tryNext();
+      };
+      tryNext();
+    }
+  
+    // Build the grid
+    const grid = document.getElementById('projects-grid');
+    PROJECTS.forEach((p, idx) => {
+      const col = document.createElement('div');
+      col.className = 'col-md-4';
+  
+      col.innerHTML = `
+        <a class="text-decoration-none" href="${p.url}" target="_blank" rel="noopener">
+          <div class="card h-100 project-img-bg">
+            <img id="hero-${p.key}" class="card-img-top project-img img-fluid" alt="${p.title}">
+            <div class="card-body">
+              <h5 class="fw-bold">${p.title}</h5>
+              <p class="card-text">${p.blurb}</p>
+              <small class="text-muted">${p.tags}</small>
+            </div>
+          </div>
+        </a>
+      `;
+      grid.appendChild(col);
+  
+      // 1) Set hero
+      const heroImg = col.querySelector(`#hero-${p.key}`);
+      loadWithFallback(heroImg, p.folder, HERO_NAMES, EXTENSIONS);
+  
+      // 2) Lightweight slideshow on hover: rotate 1..12.* if present
+      const card = col.querySelector('.card');
+      let frames = [], idxFrame = 0, timer = null;
+  
+      // Preload numerically named images (1..12)
+      const maxFrames = 12;
+      let loaded = 0;
+      for (let n=1; n<=maxFrames; n++){
+        EXTENSIONS.forEach(ext => {
+          const test = new Image();
+          test.onload = () => { frames.push(`${p.folder}/${n}.${ext}`); };
+          test.onerror = () => {};
+          test.src = `${p.folder}/${n}.${ext}`;
+          loaded++;
+        });
+      }
+  
+      function startRotate(){
+        if (timer || frames.length === 0) return;
+        timer = setInterval(() => {
+          idxFrame = (idxFrame + 1) % frames.length;
+          heroImg.src = frames[idxFrame];
+        }, 3000);
+      }
+      function stopRotate(){
+        if (timer){ clearInterval(timer); timer = null; }
+      }
+  
+      card.addEventListener('mouseenter', startRotate);
+      card.addEventListener('mouseleave', stopRotate);
+    });
+  </script>
+
 
   <!-- SKILLS -->
   <section id="skills" class="container my-5">
     <h2 class="section-title text-center">Skills</h2>
+  
+    <p class="text-center text-muted mb-4">
+      Recently completed and in-progress learning. Currently upskilling with
+      <a href="https://exodus-experts.com" target="_blank" rel="noopener" style="color:var(--primary);">Exodus Experts</a>.
+    </p>
+  
     <div class="row g-4 mt-2">
-
+      <!-- Data & BI -->
       <div class="col-md-3 col-sm-6">
         <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/1.png" class="card-img-top mx-auto d-block" alt="Python">
+          <img loading="lazy" src="images/skills/powerbi.png" class="card-img-top mx-auto d-block" alt="Power BI">
           <div class="card-body">
-            <h5 class="fw-bold">Python</h5>
-            <p class="card-text">Pandas, NumPy, data cleaning, EDA, automation integrations.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+            <h5 class="fw-bold">Power BI & AI</h5>
+            <p class="card-text">Data modeling, DAX, interactive dashboards, AI helpers.</p>
+            <a href="docs/Career_Boost_with_PowerBI.pdf" target="_blank" class="fw-bold text-decoration-none" style="color:var(--primary)">
+              View certificate
+            </a>
           </div>
         </div>
       </div>
-
+  
+      <!-- Excel & PQ -->
       <div class="col-md-3 col-sm-6">
         <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/2.png" class="card-img-top mx-auto d-block" alt="Data Visualization">
+          <img loading="lazy" src="images/skills/excel.png" class="card-img-top mx-auto d-block" alt="Excel & Power Query">
           <div class="card-body">
-            <h5 class="fw-bold">Data Visualization</h5>
-            <p class="card-text">Interactive dashboards and visual reports (Power BI, Tableau).</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+            <h5 class="fw-bold">Excel & Power Query</h5>
+            <p class="card-text">ETL, merges, automation, dynamic reporting, VBA.</p>
+            <span class="fw-bold text-muted">Used in: ProVisio, Leave Mgmt</span>
           </div>
         </div>
       </div>
-
+  
+      <!-- Web stack -->
       <div class="col-md-3 col-sm-6">
         <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/3.png" class="card-img-top mx-auto d-block" alt="SQL">
+          <img loading="lazy" src="images/skills/web.png" class="card-img-top mx-auto d-block" alt="Web stack">
           <div class="card-body">
-            <h5 class="fw-bold">SQL</h5>
-            <p class="card-text">Querying, optimization, large dataset wrangling.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+            <h5 class="fw-bold">React • Flask • MySQL</h5>
+            <p class="card-text">Full-stack app design, APIs, auth, file export.</p>
+            <span class="fw-bold text-muted">Used in: CVTailorView, ProVisio</span>
           </div>
         </div>
       </div>
-
+  
+      <!-- AI Tools -->
       <div class="col-md-3 col-sm-6">
         <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/4.png" class="card-img-top mx-auto d-block" alt="Data Storytelling">
+          <img loading="lazy" src="images/skills/ai.png" class="card-img-top mx-auto d-block" alt="AI Tools">
           <div class="card-body">
-            <h5 class="fw-bold">Data Storytelling</h5>
-            <p class="card-text">Compelling narratives that move decisions forward.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
+            <h5 class="fw-bold">AI Tools</h5>
+            <p class="card-text">ChatGPT, Claude, Gemini; agents, images, automations.</p>
+            <a href="docs/AI_Tools_Guide.pdf" target="_blank" class="fw-bold text-decoration-none" style="color:var(--primary)">
+              Download my AI Tools Guide
+            </a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/5.png" class="card-img-top mx-auto d-block" alt="Excel & VBA">
-          <div class="card-body">
-            <h5 class="fw-bold">Excel & VBA</h5>
-            <p class="card-text">Advanced formulas, pivots, VBA automation, dynamic reporting.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
-          </div>
+  
+      <!-- Current learning -->
+      <div class="col-12">
+        <div class="card p-3" style="border-radius:16px;">
+          <h5 class="fw-bold mb-2">Currently learning</h5>
+          <ul class="mb-0">
+            <li>Agentic workflows (n8n/Make, Flowise), LLM app patterns</li>
+            <li>Figma design systems (TalentGrid, Affinity), component libraries</li>
+            <li>Cloud DB & deployment for ProVisio/CVTailorView</li>
+          </ul>
         </div>
       </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/6.png" class="card-img-top mx-auto d-block" alt="Power Query">
-          <div class="card-body">
-            <h5 class="fw-bold">Power Query</h5>
-            <p class="card-text">ETL, multi-source merges, robust data prep, automation.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/7.png" class="card-img-top mx-auto d-block" alt="HTML & CSS">
-          <div class="card-body">
-            <h5 class="fw-bold">HTML & CSS</h5>
-            <p class="card-text">Clean, responsive UI for sites and web apps.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="card skill-card h-100 p-3">
-          <img loading="lazy" src="images/skills/8.png" class="card-img-top mx-auto d-block" alt="Web Scraping">
-          <div class="card-body">
-            <h5 class="fw-bold">Web Scraping</h5>
-            <p class="card-text">BeautifulSoup & Selenium for structured/unstructured data extraction.</p>
-            <a href="#" class="fw-bold text-decoration-none" style="color:var(--primary)">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
+
 
   <!-- CONTACT -->
   <section id="contact" class="contact text-center py-5">
@@ -339,5 +403,6 @@
   <script src="assets/site.js"></script>
 </body>
 </html>
+
 
 
