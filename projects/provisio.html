@@ -4,15 +4,11 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ProVisio — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-
-<!-- Favicons (project pages) -->
 <link rel="icon" href="../assets/favicon.ico?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=3">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png?v=3">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#5b7da8">
-
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../assets/site.css" rel="stylesheet">
@@ -20,90 +16,50 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    
     <a class="navbar-brand d-flex align-items-center" href="../index.html">
-      <img src="../assets/logo-primary.png" alt="NZ" class="brand-logo logo-light me-2">
-      <img src="../assets/logo-alt.png"     alt="NZ" class="brand-logo logo-dark me-2">
+      <img src="../assets/logo-primary.png" alt="Logo" class="brand-logo logo-light me-2">
+      <img src="../assets/logo-alt.png"     alt="Logo" class="brand-logo logo-dark me-2">
       My Portfolio
     </a>
-
-
-    
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
 
 <main class="container my-5">
   <h1 class="section-title">ProVisio</h1>
-  <p class="text-muted">HTML • Timesheets • Invoicing • Budgeting</p>
+  <p class="text-muted">Projects • Timesheets • Invoicing • Budgeting</p>
 
   <div class="row g-4">
     <div class="col-lg-7">
-      <div id="carousel-pv" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img src="../images/projects/6.png"  alt="ProVisio 1"></div>
-          <div class="carousel-item"><img src="../images/projects/6a.png" alt="ProVisio 2"></div>
-          <div class="carousel-item"><img src="../images/projects/6b.png" alt="ProVisio 3"></div>
-          <div class="carousel-item"><img src="../images/projects/6c.png" alt="ProVisio 4"></div>
-          <div class="carousel-item"><img src="../images/projects/6d.png" alt="ProVisio 5"></div>
-          <div class="carousel-item"><img src="../images/projects/6e.png" alt="ProVisio 6"></div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-pv" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel-pv" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div id="carousel-provisio" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" data-folder="../images/projects/6. ProVisio - App/"></div>
       </div>
     </div>
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2">Summary</h5>
-        <p>
-          ProVisio unifies operations and finance data—projects, timesheets, invoicing, creditors, and budgets—
-          so decisions are proactive rather than reactive. Section-by-project dashboards reveal utilization,
-          margins, and upcoming cashflow gaps.
-        </p>
-        <p>
-          Teams log time once; finance gets accurate drafts; leadership sees risks early. Exports create tidy PDF
-          summaries for month-end.
-        </p>
+        <p>ProVisio unifies operations and finance data—projects, timesheets, invoicing, creditors, and budgets—so decisions are proactive rather than reactive. Section-by-project dashboards reveal utilisation, margins, and upcoming cashflow.</p>
         <ul class="mb-0">
-          <li>Timesheets feed an automated invoicing pipeline</li>
-          <li>Creditor tracking + cashflow outlook for leadership</li>
-          <li>Live performance charts by section and project</li>
+          <li>Timesheets feed automated invoicing</li>
+          <li>Creditors tracking with cashflow outlook</li>
+          <li>Performance charts by section & project</li>
         </ul>
       </div>
     </div>
   </div>
 
   <hr class="my-5">
-  <h3 class="fw-bold">Problem</h3>
-  <p>Financials were siloed across separate spreadsheets; leadership lacked early visibility into margin and cashflow risk.</p>
-
-  <h3 class="fw-bold mt-4">Approach</h3>
-  <p>Designed a normalized model spanning projects, time, invoices, and creditors; created dashboards highlighting exceptions; produced PDF summaries to standardize reporting.</p>
-
-  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
-  <p>Lightweight HTML/JS frontend backed by CSV/Sheets; optional Power BI for advanced analytics and distribution.</p>
-
-  <h3 class="fw-bold mt-4">Results</h3>
-  <ul>
-    <li>Better invoicing cadence and clearer margins</li>
-    <li>Earlier, data-driven cashflow decisions</li>
-  </ul>
+  <h3 class="fw-bold">Architecture / Stack</h3>
+  <p>PostgreSQL • Flask • React • REST/JSON • XLSX import/export • PDF summaries.</p>
 
   <div class="my-5">
     <a href="../index.html?ref=provisio&title=ProVisio#contact" class="btn btn-primary">Discuss a similar project</a>
+    <a href="https://www.provisio.app" target="_blank" class="btn btn-outline ms-2">Live Site</a>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/auto-gallery.js"></script>
 <script src="../assets/site.js"></script>
 </body>
 </html>
-
-
-

@@ -16,6 +16,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/site.css" rel="stylesheet">
   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/auto-gallery.js"></script>
+<script src="assets/home-projects.js"></script>
+<script src="assets/site.js"></script>
+
   
 </head>
 <body>
@@ -102,167 +107,14 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="container my-5">
-    <h2 class="section-title text-center">Projects</h2>
   
-    <!-- Grid is filled by the script below -->
-    <div id="projects-grid" class="row g-4 mt-2"></div>
-  </section>
-  
-  <!-- Projects data + image fallback/rotator (paste once on index.html) -->
-  <script>
-    // 9 current projects
-    const PROJECTS = [
-      {
-        key: "cvtailorview",
-        title: "CVTailorView",
-        tags: "React • Flask • MySQL",
-        url: "https://www.cvtailorview.app",
-        folder: "images/projects/cvtailorview",
-        blurb: "Profile search, exports (Word/PDF), timeline charts, templates."
-      },
-      {
-        key: "provisio",
-        title: "ProVisio",
-        tags: "Timesheets • Invoicing • Budgets",
-        url: "https://www.provisio.app",
-        folder: "images/projects/provisio",
-        blurb: "Projects + timesheets + creditors with live dashboards."
-      },
-      {
-        key: "tams360",
-        title: "TAMS360",
-        tags: "Mobile • Assets • GIS",
-        url: "https://app.tams360.co.za/",
-        folder: "images/projects/tams360",
-        blurb: "Field asset capture, map, inspection & dashboard workflow."
-      },
-      {
-        key: "assetry",
-        title: "Assetry",
-        tags: "Registers • Renewals • GRAP",
-        url: "https://assetry.provisio.app",
-        folder: "images/projects/assetry",
-        blurb: "Lightweight asset register with geofencing & renewals."
-      },
-      {
-        key: "talentgrid",
-        title: "TalentGrid",
-        tags: "Figma System • Components",
-        url: "https://small-work-96524359.figma.site",
-        folder: "images/projects/talentgrid",
-        blurb: "Design system + job board UI flows and atomic components."
-      },
-      {
-        key: "affinity",
-        title: "Affinity",
-        tags: "Figma • App UI",
-        url: "https://ready-pepper-25801161.figma.site",
-        folder: "images/projects/affinity",
-        blurb: "Client relations & interaction tracking concepts."
-      },
-      {
-        key: "leave",
-        title: "Leave Management",
-        tags: "Google Sheets • Apps Script",
-        url: "https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing",
-        folder: "images/projects/leave-management",
-        blurb: "Requests, approvals, calendars, reports—sheet-native app."
-      },
-      {
-        key: "zimasy",
-        title: "ZiMaSy",
-        tags: "Figma • Biz Ops",
-        url: "https://rare-stoop-55686335.figma.site",
-        folder: "images/projects/zimasy",
-        blurb: "Ops dashboard & flows (replaces old Invoicing Summary)."
-      },
-      {
-        key: "qualipro",
-        title: "QualiPro",
-        tags: "ISO-aligned • Logs • Metrics",
-        url: "https://learn-public-72567702.figma.site",
-        folder: "images/projects/qualipro",
-        blurb: "Quality planning: risks, issues, audits & status logic."
-      }
-    ];
-  
-    // Try common hero names, then fall back to 1,2,... if needed
-    const HERO_NAMES = ["dashboard", "cover", "main", "hero", "0", "1"];
-    const EXTENSIONS = ["png", "jpg", "jpeg", "webp"];
-  
-    // Utility: set img.src with graceful fallbacks
-    function loadWithFallback(img, base, names, exts){
-      let i = 0, j = 0;
-      function tryNext(){
-        if (i >= names.length) { img.classList.add('d-none'); return; }
-        img.src = `${base}/${names[i]}.${exts[j]}`;
-      }
-      img.onerror = () => {
-        j++;
-        if (j >= exts.length){ j = 0; i++; }
-        tryNext();
-      };
-      tryNext();
-    }
-  
-    // Build the grid
-    const grid = document.getElementById('projects-grid');
-    PROJECTS.forEach((p, idx) => {
-      const col = document.createElement('div');
-      col.className = 'col-md-4';
-  
-      col.innerHTML = `
-        <a class="text-decoration-none" href="${p.url}" target="_blank" rel="noopener">
-          <div class="card h-100 project-img-bg">
-            <img id="hero-${p.key}" class="card-img-top project-img img-fluid" alt="${p.title}">
-            <div class="card-body">
-              <h5 class="fw-bold">${p.title}</h5>
-              <p class="card-text">${p.blurb}</p>
-              <small class="text-muted">${p.tags}</small>
-            </div>
-          </div>
-        </a>
-      `;
-      grid.appendChild(col);
-  
-      // 1) Set hero
-      const heroImg = col.querySelector(`#hero-${p.key}`);
-      loadWithFallback(heroImg, p.folder, HERO_NAMES, EXTENSIONS);
-  
-      // 2) Lightweight slideshow on hover: rotate 1..12.* if present
-      const card = col.querySelector('.card');
-      let frames = [], idxFrame = 0, timer = null;
-  
-      // Preload numerically named images (1..12)
-      const maxFrames = 12;
-      let loaded = 0;
-      for (let n=1; n<=maxFrames; n++){
-        EXTENSIONS.forEach(ext => {
-          const test = new Image();
-          test.onload = () => { frames.push(`${p.folder}/${n}.${ext}`); };
-          test.onerror = () => {};
-          test.src = `${p.folder}/${n}.${ext}`;
-          loaded++;
-        });
-      }
-  
-      function startRotate(){
-        if (timer || frames.length === 0) return;
-        timer = setInterval(() => {
-          idxFrame = (idxFrame + 1) % frames.length;
-          heroImg.src = frames[idxFrame];
-        }, 3000);
-      }
-      function stopRotate(){
-        if (timer){ clearInterval(timer); timer = null; }
-      }
-  
-      card.addEventListener('mouseenter', startRotate);
-      card.addEventListener('mouseleave', stopRotate);
-    });
-  </script>
-
+<section id="projects" class="container my-5">
+  <h2 class="section-title text-center">Projects</h2>
+  <div class="row g-4 mt-2" id="projects-grid">
+    <!-- Filled by /assets/home-projects.js -->
+  </div>
+</section>
+	
 
   <!-- SKILLS -->
   <section id="skills" class="container my-5">

@@ -4,15 +4,11 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QualiPro — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-
-<!-- Favicons (project pages) -->
 <link rel="icon" href="../assets/favicon.ico?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=3">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png?v=3">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#5b7da8">
-
-  
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../assets/site.css" rel="stylesheet">
@@ -20,89 +16,50 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    
     <a class="navbar-brand d-flex align-items-center" href="../index.html">
-      <img src="../assets/logo-primary.png" alt="NZ" class="brand-logo logo-light me-2">
-      <img src="../assets/logo-alt.png"     alt="NZ" class="brand-logo logo-dark me-2">
+      <img src="../assets/logo-primary.png" alt="Logo" class="brand-logo logo-light me-2">
+      <img src="../assets/logo-alt.png"     alt="Logo" class="brand-logo logo-dark me-2">
       My Portfolio
     </a>
-
-    
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
 
 <main class="container my-5">
   <h1 class="section-title">QualiPro</h1>
-  <p class="text-muted">HTML • ISO-aligned workflows • Metrics</p>
+  <p class="text-muted">ISO-Aligned Project Quality Planning • Risks • Audit Packs</p>
 
   <div class="row g-4">
     <div class="col-lg-7">
-      <div id="carousel-qp" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img src="../images/projects/5.png"  alt="QualiPro 1"></div>
-          <div class="carousel-item"><img src="../images/projects/5a.png" alt="QualiPro 2"></div>
-          <div class="carousel-item"><img src="../images/projects/5b.png" alt="QualiPro 3"></div>
-          <div class="carousel-item"><img src="../images/projects/5c.png" alt="QualiPro 4"></div>
-          <div class="carousel-item"><img src="../images/projects/5d.png" alt="QualiPro 5"></div>
-          <div class="carousel-item"><img src="../images/projects/5e.png" alt="QualiPro 6"></div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-qp" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel-qp" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div id="carousel-qualipro" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" data-folder="../images/projects/5. QualiPro/"></div>
       </div>
     </div>
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2">Summary</h5>
-        <p>
-          QualiPro centralizes quality planning artefacts—issues, risks, audits, and milestones—so that
-          PMs and auditors work from the same source of truth. Status logic powers dashboards and printable
-          audit packs, eliminating manual compilation.
-        </p>
-        <p>
-          The system aligns with ISO frameworks but remains lightweight: a static HTML app fed by CSV/JSON
-          data that anyone can export and review, online or offline.
-        </p>
+        <p>Centralises issues, risks, audits, milestones, and hand-over artefacts in a single system so PMs and auditors work from the same source of truth. Generates printable audit packs on demand.</p>
         <ul class="mb-0">
-          <li>Single-pane quality logs + risk register</li>
-          <li>Milestones with colour-coded status and metrics</li>
-          <li>One-click printable audit packs from live data</li>
+          <li>Risk & issue registers with owners and SLA</li>
+          <li>Milestones with status logic & metrics</li>
+          <li>One-click audit packs (PDF)</li>
         </ul>
       </div>
     </div>
   </div>
 
   <hr class="my-5">
-  <h3 class="fw-bold">Problem</h3>
-  <p>Quality artefacts were scattered, causing slow audits and poor traceability.</p>
-
-  <h3 class="fw-bold mt-4">Approach</h3>
-  <p>Standardized forms and status rules; compiled monthly metrics; provided dashboards for overdue actions and trends; designed print styles for auditors.</p>
-
-  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
-  <p>Static HTML/JS UI fed by CSV/JSON; secure hosting; exportable offline reports.</p>
-
-  <h3 class="fw-bold mt-4">Results</h3>
-  <ul>
-    <li>Streamlined audits and fewer non-conformances</li>
-    <li>Live visibility for PMs and auditors</li>
-  </ul>
+  <h3 class="fw-bold">Architecture / Stack</h3>
+  <p>PostgreSQL • Flask • React • REST/JSON • PDF exporter • Role-based permissions.</p>
 
   <div class="my-5">
     <a href="../index.html?ref=qualipro&title=QualiPro#contact" class="btn btn-primary">Discuss a similar project</a>
+    <a href="https://learn-public-72567702.figma.site" target="_blank" class="btn btn-outline ms-2">Design Preview</a>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/auto-gallery.js"></script>
 <script src="../assets/site.js"></script>
 </body>
 </html>
-
-
-
