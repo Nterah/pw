@@ -4,10 +4,10 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TalentGrid — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico?v=3">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png?v=3">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <meta name="theme-color" content="#5b7da8">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,64 +16,50 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="../index.html">
-      <img src="../assets/logo-primary.png" alt="Logo" class="brand-logo logo-light me-2">
-      <img src="../assets/logo-alt.png"     alt="Logo" class="brand-logo logo-dark me-2">
-      My Portfolio
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+      <img src="../assets/nterah-logo-light-rounded.png" alt="Logo" width="28" height="28" class="me-1">
+      <span>My Portfolio</span>
     </a>
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
 
 <main class="container my-5">
+  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
   <h1 class="section-title">TalentGrid</h1>
-  <p class="text-muted">People Analytics • Performance • Compensation • Learning • Leave • Utilisation</p>
+  <p class="text-muted">People Analytics • Performance • Compensation • Learning • Leave</p>
 
   <div class="row g-4">
     <div class="col-lg-7">
-      <div id="carousel-talentgrid" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" data-folder="../images/projects/1. TalentGrid/"></div>
-      </div>
+      <div id="auto-gallery" data-folder="../images/projects/1. TalentGrid"></div>
     </div>
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2">Summary</h5>
-        <p>TalentGrid unifies HR data into one live analytics layer—headcount, performance, compensation, learning, leave, and utilisation—so HR and business leaders can see risk and opportunity at a glance.</p>
-        <p>It includes consistent model definitions, drill-downs to the individual record, and exportable board-ready views.</p>
+        <p>Unified people analytics—performance, compensation, learning and leave—in a single model, with privacy-aware dashboards and trends for leadership.</p>
         <ul class="mb-0">
-          <li>Single source of truth across HR domains</li>
-          <li>Equity & comp analytics (range breaches, compa-ratio, pay-for-performance)</li>
-          <li>Learning & skills tracking aligned to roles</li>
-          <li>Workforce utilisation, leave trends, and attrition risk indicators</li>
+          <li>Metric library & team/department rollups</li>
+          <li>Equity/fairness checks & red-flag alerts</li>
+          <li>Drill-downs to individual history (RBAC)</li>
         </ul>
+        <div class="mt-3 d-flex gap-2">
+          <a class="btn btn-primary" href="https://small-work-96524359.figma.site" target="_blank" rel="noopener">Design</a>
+        </div>
       </div>
     </div>
   </div>
 
   <hr class="my-5">
-  <h3 class="fw-bold">Problem</h3>
-  <p>HR metrics lived in disconnected spreadsheets and tools, making it hard to answer basic questions fast and consistently.</p>
+  <h3 class="fw-bold">Architecture / Stack</h3>
+  <p>PostgreSQL • Flask • React • REST/JSON • Aggregations & caching • Role-based access.</p>
 
-  <h3 class="fw-bold mt-4">Approach</h3>
-  <p>Designed a canonical HR schema; built ingestion to standardise uploads; modelled metrics (performance distributions, comp ratios, learning progress, leave balances) and exposed curated dashboards.</p>
-
-  <h3 class="fw-bold mt-4">Architecture / Stack</h3>
-  <p>PostgreSQL • Flask API • React • REST/JSON; auth with role-based access; scheduled loads; audit trails; export to CSV/PDF.</p>
-
-  <h3 class="fw-bold mt-4">Results</h3>
-  <ul>
-    <li>Exec-level HR reporting time cut from days to minutes</li>
-    <li>Consistent analytics across performance, pay, and utilisation</li>
-  </ul>
-
-  <div class="my-5">
+  <div class="my-4">
     <a href="../index.html?ref=talentgrid&title=TalentGrid#contact" class="btn btn-primary">Discuss a similar project</a>
-    <a href="https://small-work-96524359.figma.site" target="_blank" class="btn btn-outline ms-2">Design Preview</a>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/auto-gallery.js"></script>
 <script src="../assets/site.js"></script>
+<script src="../assets/auto-gallery.js"></script>
 </body>
 </html>

@@ -110,3 +110,24 @@ html[data-theme="dark"] .navbar-toggler-icon{ filter:invert(1); }
 /* ===== Buttons ===== */
 .btn-primary{ background:var(--primary); border-color:var(--primary); }
 .btn-outline{ border:1px solid var(--border); color:var(--text); }
+
+
+/* Light/Dark logo toggle (prevents double logo) */
+.logo-dark { display: none; }
+html[data-theme="dark"] .logo-light { display: none; }
+html[data-theme="dark"] .logo-dark  { display: inline; }
+
+/* Project thumbnails on the home page */
+.proj-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+
+
+.proj-card { border:1px solid var(--border); border-radius:16px; background:var(--card-bg); }
+.proj-thumb{ width:100%; height:180px; object-fit:cover; border-top-left-radius:16px; border-top-right-radius:16px; border-bottom:1px solid var(--border); background:var(--card-bg); }

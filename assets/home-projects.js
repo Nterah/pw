@@ -1,147 +1,136 @@
-/* Home Projects grid — auto thumbnail via dashboard.* or 1.png, 1a.jpg, … */
-(function () {
-  const EXTS = ["png", "jpg", "jpeg", "webp"];
-  const SUFFIX = ["", "a", "b", "c", "d", "e", "f"];
-  const enc = (p) => encodeURI(p);
+<!-- /assets/home-projects.js -->
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
 
-  // Edit text only; folders/pages match your repo
-  const PROJECTS = [
+  // --- Project registry (edit here only when you add/remove a project) ---
+  const projects = [
     {
-      title: "CVTailorView",
-      blurb:
-        "Profiles, projects, advanced search and branded Word/PDF exports.",
-      folder: "images/projects/4. CVTailorView/",
-      page: "projects/cvtailorview.html",
-      site: "https://www.cvtailorview.app",
-      siteLabel: "Live site",
-      tags: "React • Flask • PostgreSQL",
+      key: 'cvtailorview',
+      title: 'CVTailorView',
+      stack: 'React • Flask • PostgreSQL',
+      blurb: 'Profiles, projects, advanced search and branded Word/PDF exports.',
+      folder: 'images/projects/4. CVTailorView',
+      caseStudy: 'projects/cvtailorview.html',
+      live: { label: 'Live site', url: 'https://www.cvtailorview.app' },
     },
     {
-      title: "ProVisio",
-      blurb: "Projects, timesheets, invoicing, creditors, budgets, dashboards.",
-      folder: "images/projects/6. ProVisio - App/",
-      page: "projects/provisio.html",
-      site: "https://www.provisio.app",
-      siteLabel: "Live site",
-      tags: "React • Flask • PostgreSQL",
+      key: 'provisio',
+      title: 'ProVisio',
+      stack: 'React • Flask • PostgreSQL',
+      blurb: 'Projects, timesheets, invoicing, creditors, budgets, dashboards.',
+      folder: 'images/projects/6. ProVisio - App',
+      caseStudy: 'projects/provisio.html',
+      live: { label: 'Live site', url: 'https://www.provisio.app' },
     },
     {
-      title: "TAMS360",
-      blurb: "Mobile asset capture & inspections with GIS and photo evidence.",
-      folder: "images/projects/8. TAMS360/",
-      page: "projects/tams360.html",
-      site: "https://app.tams360.co.za/",
-      siteLabel: "Live app",
-      tags: "React • Flask • PostGIS",
+      key: 'tams360',
+      title: 'TAMS360',
+      stack: 'React • Flask • PostGIS',
+      blurb: 'Mobile asset capture & inspections with GIS and photo evidence.',
+      folder: 'images/projects/8. TAMS360',
+      caseStudy: 'projects/tams360.html',
+      live: { label: 'Live app', url: 'https://app.tams360.co.za/' },
     },
     {
-      title: "Assetry",
-      blurb:
-        "Asset register with geofencing, QR/NFC scans, renewals & GRAP reports.",
-      folder: "images/projects/9. Assetry/",
-      page: "projects/assetry.html",
-      site: "https://assetry.provisio.app",
-      siteLabel: "Live app",
-      tags: "React • Flask • PostgreSQL",
+      key: 'assetry',
+      title: 'Assetry',
+      stack: 'React • Flask • PostgreSQL',
+      blurb: 'Asset register with geofencing, QR/NFC scans, renewals & GRAP reports.',
+      folder: 'images/projects/9. Assetry',
+      caseStudy: 'projects/assetry.html',
+      live: { label: 'Live app', url: 'https://assetry.provisio.app' },
     },
     {
-      title: "TalentGrid",
-      blurb:
-        "People analytics across performance, compensation, learning & leave.",
-      folder: "images/projects/1. TalentGrid/",
-      page: "projects/talentgrid.html",
-      site: "https://small-work-96524359.figma.site",
-      siteLabel: "Design",
-      tags: "People Analytics",
+      key: 'talentgrid',
+      title: 'TalentGrid',
+      stack: 'People Analytics',
+      blurb: 'People analytics across performance, compensation, learning & leave.',
+      folder: 'images/projects/1. TalentGrid',
+      caseStudy: 'projects/talentgrid.html',
+      live: { label: 'Design', url: 'https://small-work-96524359.figma.site' },
     },
     {
-      title: "Affinity",
-      blurb: "CRM pipelines, interactions, proposals and reminders.",
-      folder: "images/projects/7. Affinity/",
-      page: "projects/affinity.html",
-      site: "https://ready-pepper-25801161.figma.site",
-      siteLabel: "Design",
-      tags: "CRM",
+      key: 'affinity',
+      title: 'Affinity',
+      stack: 'CRM',
+      blurb: 'CRM pipelines, interactions, proposals and reminders.',
+      folder: 'images/projects/7. Affinity',
+      caseStudy: 'projects/affinity.html',
+      live: { label: 'Design', url: 'https://ready-pepper-25801161.figma.site' },
     },
     {
-      title: "Leave Management",
-      blurb: "Requests, approvals, calendars and utilisation reports.",
-      folder: "images/projects/3. Leave Management/",
-      page: "projects/leave-management.html",
-      site: "https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing",
-      siteLabel: "Template",
-      tags: "Google Sheets + Apps Script",
+      key: 'leave',
+      title: 'Leave Management',
+      stack: 'Google Sheets • Apps Script',
+      blurb: 'Requests, approvals, calendars and utilisation reports.',
+      folder: 'images/projects/3. Leave Management',
+      caseStudy: 'projects/leave-management.html',
+      live: { label: 'Template', url: 'https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing' },
     },
     {
-      title: "ZiMaSy",
-      blurb: "Automated statements, exceptions and collections workflow.",
-      folder: "images/projects/2. ZiMaSy/",
-      page: "projects/zimasy.html",
-      site: "https://rare-stoop-55686335.figma.site",
-      siteLabel: "Design",
-      tags: "Finance Automation",
+      key: 'zimasy',
+      title: 'ZiMaSy',
+      stack: 'Finance Automation',
+      blurb: 'Automated statements, exceptions and collections workflow.',
+      folder: 'images/projects/2. ZiMaSy',
+      caseStudy: 'projects/zimasy.html',
+      live: { label: 'Design', url: 'https://rare-stoop-55686335.figma.site' },
     },
     {
-      title: "QualiPro",
-      blurb: "ISO-aligned quality planning, risks, milestones and audit packs.",
-      folder: "images/projects/5. QualiPro/",
-      page: "projects/qualipro.html",
-      site: "https://learn-public-72567702.figma.site",
-      siteLabel: "Design",
-      tags: "Quality • ISO",
+      key: 'qualipro',
+      title: 'QualiPro',
+      stack: 'Quality • ISO',
+      blurb: 'ISO-aligned quality planning, risks, milestones and audit packs.',
+      folder: 'images/projects/5. QualiPro - App',
+      caseStudy: 'projects/qualipro.html',
+      live: { label: 'Design', url: 'https://learn-public-72567702.figma.site' },
     },
   ];
 
-  function candidates() {
-    const list = [];
-    EXTS.forEach((e) => list.push(`dashboard.${e}`));
-    for (const s of SUFFIX) for (const e of EXTS) list.push(`1${s}.${e}`);
-    return list;
+  // helper: pick thumbnail from gallery.json or fallback to 1.png/jpg/…
+  async function resolveThumb(baseFolder) {
+    try {
+      const res = await fetch(`${baseFolder}/gallery.json?ts=${Date.now()}`, { cache: 'no-store' });
+      if (res.ok) {
+        const data = await res.json();
+        const pick = data.thumb || (data.images && data.images[0]);
+        if (pick) return `${baseFolder}/${encodeURIComponent(pick)}`;
+      }
+    } catch(_) {}
+    const exts = ['png','jpg','jpeg','webp'];
+    for (const ext of exts) {
+      const probe = `${baseFolder}/1.${ext}`;
+      try {
+        const r = await fetch(probe, { method:'HEAD', cache:'no-store' });
+        if (r.ok) return probe;
+      } catch(_) {}
+    }
+    return ''; // no image
   }
 
-  function probe(base, rel) {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(base + rel);
-      img.onerror = () => resolve(null);
-      img.src = enc(base + rel);
-    });
+  // render cards
+  for (const p of projects) {
+    const card = document.createElement('div');
+    card.className = 'col-md-6 col-xl-4';
+    const imgSrc = await resolveThumb(p.folder);
+
+    card.innerHTML = `
+      <div class="card h-100 shadow-sm proj-card">
+        ${imgSrc ? `<img class="proj-thumb" alt="${p.title} preview" src="${imgSrc}">` : ''}
+        <div class="card-body">
+          <h5 class="fw-bold mb-1">${p.title}</h5>
+          <div class="text-muted small mb-2">${p.stack}</div>
+          <p class="mb-3">${p.blurb}</p>
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline" href="${p.caseStudy}">Case study</a>
+            <a class="btn btn-primary" href="${p.live.url}" target="_blank" rel="noopener">${p.live.label}</a>
+          </div>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
   }
-
-  async function pickThumb(base) {
-    const found = (
-      await Promise.all(candidates().map((r) => probe(base, r)))
-    ).find(Boolean);
-    return found || "assets/placeholder-16x9.png";
-  }
-
-  async function render() {
-    const grid = document.getElementById("projects-grid");
-    if (!grid) return;
-
-    const rows = await Promise.all(
-      PROJECTS.map(async (p) => {
-        const thumb = await pickThumb(p.folder);
-        return `
-          <div class="col-md-4">
-            <div class="card h-100 project-img-bg">
-              <img src="${enc(thumb)}" class="card-img-top project-img" alt="">
-              <div class="card-body d-flex flex-column">
-                <h5 class="fw-bold mb-1">${p.title}</h5>
-                <div class="text-muted small mb-2">${p.tags || ""}</div>
-                <p class="card-text flex-grow-1">${p.blurb}</p>
-                <div class="d-flex gap-2 mt-2">
-                  <a class="btn btn-outline" href="${enc(p.page)}">Case study</a>
-                  <a class="btn btn-primary" target="_blank" href="${enc(p.site)}">${p.siteLabel || "Visit"}</a>
-                </div>
-              </div>
-            </div>
-          </div>`;
-      })
-    );
-
-    grid.innerHTML = rows.join("");
-  }
-
-  window.addEventListener("DOMContentLoaded", render);
-})();
+});
+</script>

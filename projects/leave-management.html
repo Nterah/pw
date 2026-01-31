@@ -4,10 +4,10 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leave Management — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico?v=3">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png?v=3">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=3">
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <meta name="theme-color" content="#5b7da8">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,50 +16,50 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="../index.html">
-      <img src="../assets/logo-primary.png" alt="Logo" class="brand-logo logo-light me-2">
-      <img src="../assets/logo-alt.png"     alt="Logo" class="brand-logo logo-dark me-2">
-      My Portfolio
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+      <img src="../assets/nterah-logo-light-rounded.png" alt="Logo" width="28" height="28" class="me-1">
+      <span>My Portfolio</span>
     </a>
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
   </div>
 </nav>
 
 <main class="container my-5">
+  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
   <h1 class="section-title">Leave Management</h1>
-  <p class="text-muted">Google Sheets + Apps Script • Approvals • Calendars • Reports</p>
+  <p class="text-muted">Google Sheets • Apps Script • Requests • Approvals • Calendars</p>
 
   <div class="row g-4">
     <div class="col-lg-7">
-      <div id="carousel-leave" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" data-folder="../images/projects/3. Leave Management/"></div>
-      </div>
+      <div id="auto-gallery" data-folder="../images/projects/3. Leave Management"></div>
     </div>
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2">Summary</h5>
-        <p>Lightweight leave tool for teams: requests, multi-step approvals, shared calendars, and utilisation reports—implemented with Google Sheets + Apps Script for fast adoption.</p>
+        <p>Lightweight leave tool for requests, approvals and team calendars. Automations calculate balances and utilisation.</p>
         <ul class="mb-0">
-          <li>Email approvals & manager dashboards</li>
-          <li>Policy rules (carry-over, pro-rata, black-out dates)</li>
-          <li>Exports for payroll</li>
+          <li>Request → approve → update balance</li>
+          <li>Shared calendar & conflicts view</li>
+          <li>Exportable monthly summaries</li>
         </ul>
+        <div class="mt-3 d-flex gap-2">
+          <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing" target="_blank" rel="noopener">Template</a>
+        </div>
       </div>
     </div>
   </div>
 
   <hr class="my-5">
   <h3 class="fw-bold">Architecture / Stack</h3>
-  <p>Google Sheets • Apps Script • Gmail/Calendar API • HTML Service for modals.</p>
+  <p>Google Sheets • Google Apps Script • Email notifications • PDF exports.</p>
 
-  <div class="my-5">
+  <div class="my-4">
     <a href="../index.html?ref=leave-management&title=Leave%20Management#contact" class="btn btn-primary">Discuss a similar project</a>
-    <a href="https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing" target="_blank" class="btn btn-outline ms-2">Template</a>
   </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/auto-gallery.js"></script>
 <script src="../assets/site.js"></script>
+<script src="../assets/auto-gallery.js"></script>
 </body>
 </html>
