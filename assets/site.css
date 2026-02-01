@@ -218,3 +218,26 @@ html[data-theme="dark"] .btn-outline:hover{
   border-color:rgba(255,255,255,.40);
   background:rgba(255,255,255,.06);
 }
+
+
+
+/* Project card title must follow theme */
+.project-card h3,
+.project-card .project-title,
+.project-card .card-title,
+.projects-grid h3,
+.projects-grid .card-title{
+  color: var(--text) !important;
+}
+
+/* If any title links exist */
+.project-card a.project-title,
+.project-card a.card-title{
+  color: var(--text) !important;
+  text-decoration: none;
+}
+.project-card a.project-title:hover,
+.project-card a.card-title:hover{
+  text-decoration: underline;
+}
+
