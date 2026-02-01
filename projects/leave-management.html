@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../icons/nterah-logo-48.png" alt="Ntembeko Zifuku" class="brand-logo">
+      <img src="../icons/nterah-logo-48.png" " alt="Logo" width="28" height="28" class="me-1">
       <span>My Portfolio</span>
     </a>
     <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
@@ -27,7 +27,7 @@
 <main class="container my-5">
   <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
   <h1 class="section-title">Leave Management</h1>
-  <p class="text-muted">Leave Requests • Approvals • Balances • Calendar Planning</p>
+  <p class="text-muted">Requests • Approvals • Calendars • Policy rules • Reporting</p>
 
   <div class="row g-4">
     <div class="col-lg-7">
@@ -36,14 +36,14 @@
     <div class="col-lg-5">
       <div class="card p-4">
         <h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
-        <p>Leave Management Tool is a lightweight leave tracking and approvals system built around a structured workflow. It supports employee records, leave types and policies, leave requests, approvals, leave balances, and calendar views — designed for teams that want process control and visibility without a heavy HR suite.</p>
+        <p>A lightweight leave tool built on Google Sheets/Apps Script. It covers capture, approvals, policy checks,
+        balance tracking, and team calendars. Managers see availability and history at a glance; HR exports are
+        standardized for payroll.</p>
         <ul class="mb-3">
-  <li>Leave requests + approval workflow</li>
-  <li>Auto-updated leave balances and summaries</li>
-  <li>Calendar view for planning and coverage</li>
-  <li>Basic reporting and auditability</li>
-  <li>Lightweight and easy to deploy</li>
-</ul>
+          <li>Accrual and carry-over rules configurable</li>
+          <li>Approval routing with email notifications</li>
+          <li>Department/team calendar overlays</li>
+        </ul>
         <div class="d-flex flex-wrap gap-2">
           <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing" target="_blank" rel="noopener">Visit site</a>
           <a class="btn btn-outline" href="../index.html?ref=leave-management&title=Leave%20Management#contact">Discuss a similar project</a>
@@ -53,81 +53,8 @@
   </div>
 
   <hr class="my-5">
-
-  <div class="row g-4">
-    <div class="col-lg-6">
-      <h3 class="fw-bold">At a glance</h3>
-      <h6 class="text-muted mt-3 mb-2">Who it’s for</h6>
-      <ul class="mb-3">
-  <li>Small-to-mid teams without dedicated HR platforms</li>
-  <li>Admin/HR staff who need a clear approvals trail</li>
-  <li>Managers who need quick visibility into team availability</li>
-</ul>
-      <h6 class="text-muted mt-3 mb-2">What it solves</h6>
-      <ul class="mb-0">
-  <li>Leave requests scattered across chats and emails</li>
-  <li>Manual balance calculations and errors</li>
-  <li>No single calendar for leave planning</li>
-  <li>Weak approval records and audit trails</li>
-</ul>
-    </div>
-
-    <div class="col-lg-6">
-      <h3 class="fw-bold">Problem</h3>
-      <p>Without a structured tool, leave management becomes fragmented: requests are scattered, balances drift, and teams struggle with planning and operational cover.</p>
-
-      <h3 class="fw-bold mt-4">Solution</h3>
-      <p>This tool centralises leave into one workflow: capture requests, approve/reject with status tracking, automatically maintain balances, and show leave calendars and reports for visibility.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 mt-1">
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Key workflows</h3>
-      <ul class="mb-0">
-  <li>Admin configures leave types and policy rules</li>
-  <li>Employees submit leave requests (type, dates, notes)</li>
-  <li>Managers approve/reject with audit-friendly tracking</li>
-  <li>Leave balances update automatically as requests are processed</li>
-  <li>Calendar and reports support planning and oversight</li>
-</ul>
-    </div>
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Notable features</h3>
-      <ul class="mb-0">
-  <li>Employee master list + entitlements</li>
-  <li>Leave request intake + approvals tracking</li>
-  <li>Balance calculations + summaries</li>
-  <li>Calendar views for upcoming leave</li>
-  <li>Reporting views for HR/admin review</li>
-</ul>
-    </div>
-  </div>
-
-  <div class="row g-4 mt-1">
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Tech / Architecture</h3>
-      <ul class="mb-0">
-  <li>Spreadsheet-style structured workflow with standardised tabs/sections</li>
-  <li>Automation-friendly (notifications/approval actions where applicable)</li>
-</ul>
-    </div>
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Challenges & decisions</h3>
-      <ul class="mb-0">
-  <li>Keeping the workflow robust under multi-user editing</li>
-  <li>Preventing “version drift” with standardised data entry rules</li>
-  <li>Ensuring approvals remain traceable and auditable</li>
-</ul>
-    </div>
-  </div>
-
-  <h3 class="fw-bold mt-5">Results / impact</h3>
-  <ul class="mb-0">
-  <li>Faster leave processing with less manual admin</li>
-  <li>Better planning with a single calendar view</li>
-  <li>Reduced balance calculation errors</li>
-</ul>
+  <h3 class="fw-bold">Architecture / Stack</h3>
+  <p>Google Sheets + Apps Script; optional API sync to Flask/PostgreSQL for payroll/HCM integration.</p>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

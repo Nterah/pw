@@ -197,3 +197,24 @@ html[data-theme="dark"] .logo-light{display:none}
 @media (min-width: 992px){
   .skill-card img.card-img-top{ width:200px; height:200px; }
 }
+
+
+
+
+/* Stronger outline button border (works on light + dark) */
+.btn-outline{
+  border:1px solid rgba(0,0,0,.28);
+  color:var(--text);
+  background:transparent;
+}
+.btn-outline:hover{
+  border-color:rgba(0,0,0,.40);
+  background:rgba(0,0,0,.04);
+}
+html[data-theme="dark"] .btn-outline{
+  border-color:rgba(255,255,255,.26);
+}
+html[data-theme="dark"] .btn-outline:hover{
+  border-color:rgba(255,255,255,.40);
+  background:rgba(255,255,255,.06);
+}
