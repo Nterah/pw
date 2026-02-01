@@ -53,7 +53,7 @@
       blurb: 'Analytics across performance, compensation, learning & leave.',
       details: 'projects/talentgrid.html',
       ctaUrl: 'https://small-work-96524359.figma.site',
-      ctaLabel: 'Design',
+      ctaLabel: 'Open App',
       preview: 'images/projects/1. TalentGrid/TalentGrid 1 Dashboard 1.png'
     },
     {
@@ -62,7 +62,7 @@
       blurb: 'CRM pipelines, interactions, proposals and reminders.',
       details: 'projects/affinity.html',
       ctaUrl: 'https://ready-pepper-25801161.figma.site',
-      ctaLabel: 'Design',
+      ctaLabel: 'Open App',
       preview: 'images/projects/7. Affinity/Affinity 1 Home 1.png'
     },
     {
@@ -80,7 +80,7 @@
       blurb: 'Automated statements, exceptions and collections workflow.',
       details: 'projects/zimasy.html',
       ctaUrl: 'https://rare-stoop-55686335.figma.site',
-      ctaLabel: 'Design',
+      ctaLabel: 'Open App',
       preview: 'images/projects/2. ZiMaSy/ZiMaSy 1 Dashboard 2.png'
     },
     {
@@ -89,7 +89,7 @@
       blurb: 'ISO-aligned quality planning, risks, milestones & printable audit packs.',
       details: 'projects/qualipro.html',
       ctaUrl: 'https://learn-public-72567702.figma.site',
-      ctaLabel: 'Design',
+      ctaLabel: 'Open App',
       preview: 'images/projects/5. QualiPro/QualiPro 9. Main.png'
     }
   ];
