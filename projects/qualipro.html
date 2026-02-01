@@ -1,52 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>QualiPro — Case Study | My Portfolio</title>
-  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>QualiPro — Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <main class="container my-4">
-    <a href="../index.html#projects" class="btn btn-outline-secondary btn-sm mb-3">← Back to projects</a>
+  <main class="container">
+    <p><a href="../index.html#projects" class="back">← Back to projects</a></p>
 
-    <h1 class="display-6 fw-bold">QualiPro</h1>
-    <p class="text-muted mb-4">Quality • ISO</p>
+    <h1>QualiPro</h1>
+    <p class="sub">Quality • ISO • Risks • Milestones • Audit Packs</p>
 
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8">
-        <div class="border rounded-3 bg-light-subtle ratio ratio-16x9 d-flex align-items-center justify-content-center"
-             data-gallery-path="../images/projects/5. QualiPro">
-          <span class="text-muted">Loading previews…</span>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title text-body-emphasis mb-3">Summary</h5>
-            <p class="mb-2">Quality planning artefacts—issues, risks, audits, milestones—managed in one place with printable audit packs and dashboards.</p>
-            <ul class="mb-3">
-              <li>Single-pane quality logs + risk register</li>
-              <li>Milestones with colour-coded status &amp; metrics</li>
-              <li>One-click printable audit packs from live data</li>
-            </ul>
-            <div class="d-flex gap-2">
-              <a class="btn btn-outline-secondary btn-sm" href="#contact">Discuss a similar project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="my-4">
-    <section class="mb-5">
-      <h5 class="fw-bold">Architecture / Stack</h5>
-      <p>PostgreSQL • Flask • React • REST/JSON • PDF/CSV export.</p>
+    <section class="project-hero">
+      <div id="gallery"></div>
+      <aside class="summary card">
+        <h3>Summary</h3>
+        <p>Centralises quality planning artefacts—issues, risks, audits, and milestones—so teams work from one source of truth, with printable audit packs and dashboards.</p>
+        <ul>
+          <li>Single-pane quality logs + risk register</li>
+          <li>Milestones with colour-coded status and metrics</li>
+          <li>One-click printable audit packs from live data</li>
+        </ul>
+        <p class="actions"><a href="#" class="btn">Design</a></p>
+      </aside>
     </section>
+
+    <h3>Architecture / Stack</h3>
+    <p>PostgreSQL • Flask • React • REST/JSON • PDF/CSV export.</p>
   </main>
 
-  <script src="../assets/bootstrap.bundle.min.js"></script>
-  <script src="../assets/gallery-auto.js"></script>
+  <script defer src="../assets/gallery-auto.js"></script>
+  <script>initGallery('#gallery', 'images/projects/5. QualiPro');</script>
 </body>
 </html>

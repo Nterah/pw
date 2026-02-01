@@ -1,53 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TAMS360 — Case Study | My Portfolio</title>
-  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>TAMS360 — Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <main class="container my-4">
-    <a href="../index.html#projects" class="btn btn-outline-secondary btn-sm mb-3">← Back to projects</a>
+  <main class="container">
+    <p><a href="../index.html#projects" class="back">← Back to projects</a></p>
 
-    <h1 class="display-6 fw-bold">TAMS360</h1>
-    <p class="text-muted mb-4">Asset Inspections • Evidence • GIS</p>
+    <h1>TAMS360</h1>
+    <p class="sub">Asset Inspections • Evidence • GIS</p>
 
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8">
-        <div class="border rounded-3 bg-light-subtle ratio ratio-16x9 d-flex align-items-center justify-content-center"
-             data-gallery-path="../images/projects/8. TAMS360">
-          <span class="text-muted">Loading previews…</span>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title text-body-emphasis mb-3">Summary</h5>
-            <p class="mb-2">Mobile + web inspections with photos/evidence, map navigation, and spatial filters.</p>
-            <ul class="mb-3">
-              <li>Offline capture; multi-photo inspections; QR/NFC</li>
-              <li>Map view with GIS filters; exception queues</li>
-              <li>Scheduled reminders and close-out workflow</li>
-            </ul>
-            <div class="d-flex gap-2">
-              <a class="btn btn-danger btn-sm" href="#" role="button">Live App</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#contact">Discuss a similar project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="my-4">
-    <section class="mb-5">
-      <h5 class="fw-bold">Tech / Architecture</h5>
-      <p>PostgreSQL + PostGIS • Flask • React (web + mobile client).</p>
+    <section class="project-hero">
+      <div id="gallery"></div>
+      <aside class="summary card">
+        <h3>Summary</h3>
+        <p>Mobile and web platform for asset capture and inspections with photos/evidence, map navigation, and spatial filters.</p>
+        <ul>
+          <li>Offline capture; multi-photo inspections; QR/NFC</li>
+          <li>Map view with GIS filters; exception queues</li>
+          <li>Scheduled reminders and close-out workflow</li>
+        </ul>
+        <p class="actions">
+          <a href="#" class="btn">Live App</a>
+          <a href="#" class="btn">Discuss a similar project</a>
+        </p>
+      </aside>
     </section>
+
+    <h3>Tech / Architecture</h3>
+    <p>PostgreSQL + PostGIS • Flask • React (web + mobile client).</p>
   </main>
 
-  <script src="../assets/bootstrap.bundle.min.js"></script>
-  <script src="../assets/gallery-auto.js"></script>
+  <script defer src="../assets/gallery-auto.js"></script>
+  <script>initGallery('#gallery', 'images/projects/8. TAMS360');</script>
 </body>
 </html>

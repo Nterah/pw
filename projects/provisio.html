@@ -1,62 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ProVisio — Case Study | My Portfolio</title>
-  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>ProVisio — Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <main class="container my-4">
-    <a href="../index.html#projects" class="btn btn-outline-secondary btn-sm mb-3">← Back to projects</a>
+  <main class="container">
+    <p><a href="../index.html#projects" class="back">← Back to projects</a></p>
 
-    <h1 class="display-6 fw-bold">ProVisio</h1>
-    <p class="text-muted mb-4">Projects • Timesheets • Invoicing • Budgeting</p>
+    <h1>ProVisio</h1>
+    <p class="sub">Projects • Timesheets • Invoicing • Budgeting</p>
 
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8">
-        <div class="border rounded-3 bg-light-subtle ratio ratio-16x9 d-flex align-items-center justify-content-center"
-             data-gallery-path="../images/projects/6. ProVisio - App">
-          <span class="text-muted">Loading previews…</span>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title text-body-emphasis mb-3">Summary</h5>
-            <p class="mb-2">Operations + finance in one view—projects, timesheets, invoicing, creditors, and budgets—so decisions are proactive rather than reactive.</p>
-            <ul class="mb-3">
-              <li>Timesheets feeding automated invoicing</li>
-              <li>Creditors tracking with cash-flow outlook</li>
-              <li>Utilisation &amp; margin dashboards by section &amp; project</li>
-            </ul>
-            <div class="d-flex gap-2">
-              <a class="btn btn-danger btn-sm" href="#" role="button">Live Site</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#contact">Discuss a similar project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="my-4">
-    <section class="mb-4">
-      <h5 class="fw-bold">What’s included</h5>
-      <ul>
-        <li>Projects/portfolio dashboards; budgets vs actuals</li>
-        <li>Timesheets → billing pipeline; invoicing &amp; receipts</li>
-        <li>Creditors &amp; expenses (ageing), reports; XLSX import/export; PDF summaries</li>
-      </ul>
+    <section class="project-hero">
+      <div id="gallery"></div>
+      <aside class="summary card">
+        <h3>Summary</h3>
+        <p>Operations + finance in one view—projects, timesheets, invoicing, creditors, and budgets—so decisions are proactive rather than reactive.</p>
+        <ul>
+          <li>Timesheets feeding automated invoicing</li>
+          <li>Creditors tracking with cash-flow outlook</li>
+          <li>Utilisation & margin dashboards by section & project</li>
+        </ul>
+        <p class="actions">
+          <a href="#" class="btn">Live Site</a>
+          <a href="#" class="btn">Discuss a similar project</a>
+        </p>
+      </aside>
     </section>
 
-    <section class="mb-5">
-      <h5 class="fw-bold">Tech / Architecture</h5>
-      <p>PostgreSQL • Flask • React • JSON APIs.</p>
-    </section>
+    <h3>What’s included</h3>
+    <ul>
+      <li>Projects/portfolio dashboards; budgets vs actuals</li>
+      <li>Timesheets → billing pipeline; invoicing & receipts</li>
+      <li>Creditors & expenses (ageing), reports; XLSX import/export; PDF summaries</li>
+    </ul>
+
+    <h3>Tech / Architecture</h3>
+    <p>PostgreSQL • Flask • React • JSON APIs.</p>
   </main>
 
-  <script src="../assets/bootstrap.bundle.min.js"></script>
-  <script src="../assets/gallery-auto.js"></script>
+  <script defer src="../assets/gallery-auto.js"></script>
+  <script>initGallery('#gallery', 'images/projects/6. ProVisio - App');</script>
 </body>
 </html>

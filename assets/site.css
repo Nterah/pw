@@ -168,3 +168,18 @@ html[data-theme="dark"] .logo-dark  { display: inline; }
 html[data-theme="dark"] .logo-dark{display:inline}
 html[data-theme="dark"] .logo-light{display:none}
 
+
+
+/* Skills thumbnails */
+.skills-grid .skill-card img {
+  width: 108px;       /* adjust to taste: 96–128px */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* If you want a little larger on wide screens */
+@media (min-width: 900px) {
+  .skills-grid .skill-card img { width: 120px; }
+}
+

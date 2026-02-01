@@ -1,52 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Leave Management — Case Study | My Portfolio</title>
-  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>Leave Management — Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <main class="container my-4">
-    <a href="../index.html#projects" class="btn btn-outline-secondary btn-sm mb-3">← Back to projects</a>
+  <main class="container">
+    <p><a href="../index.html#projects" class="back">← Back to projects</a></p>
 
-    <h1 class="display-6 fw-bold">Leave Management</h1>
-    <p class="text-muted mb-4">Requests • Approvals • Calendars • Utilisation</p>
+    <h1>Leave Management</h1>
+    <p class="sub">Requests • Approvals • Calendars • Utilisation</p>
 
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8">
-        <div class="border rounded-3 bg-light-subtle ratio ratio-16x9 d-flex align-items-center justify-content-center"
-             data-gallery-path="../images/projects/3. Leave Management">
-          <span class="text-muted">Loading previews…</span>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title text-body-emphasis mb-3">Summary</h5>
-            <p class="mb-2">Google Sheets + Apps Script tool for leave requests, approvals, shared calendars and utilisation tracking across teams.</p>
-            <ul class="mb-3">
-              <li>Email-based approvals + validation</li>
-              <li>Team calendars and blackout dates</li>
-              <li>Utilisation &amp; carry-over reports</li>
-            </ul>
-            <div class="d-flex gap-2">
-              <a class="btn btn-outline-secondary btn-sm" href="#contact">Template / Discuss</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="my-4">
-    <section class="mb-5">
-      <h5 class="fw-bold">Template</h5>
-      <p>Google Sheets • Apps Script automation.</p>
+    <section class="project-hero">
+      <div id="gallery"></div>
+      <aside class="summary card">
+        <h3>Summary</h3>
+        <p>Google Sheets + Apps Script tool for leave requests, manager approvals, shared calendars and utilisation tracking.</p>
+        <ul>
+          <li>Email-based approvals + validation</li>
+          <li>Team calendars and blackout dates</li>
+          <li>Utilisation & carry-over reports</li>
+        </ul>
+        <p class="actions">
+          <a href="#" class="btn">Template</a>
+          <a href="#" class="btn">Discuss a similar project</a>
+        </p>
+      </aside>
     </section>
+
+    <h3>Template</h3>
+    <p>Google Sheets • Apps Script automation.</p>
   </main>
 
-  <script src="../assets/bootstrap.bundle.min.js"></script>
-  <script src="../assets/gallery-auto.js"></script>
+  <script defer src="../assets/gallery-auto.js"></script>
+  <script>initGallery('#gallery', 'images/projects/3. Leave Management');</script>
 </body>
 </html>
