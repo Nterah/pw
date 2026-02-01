@@ -247,3 +247,43 @@ html[data-theme="dark"] .btn-outline:hover{
 }
 
 
+/* ================================
+   THEME-SAFE HEADINGS (GLOBAL)
+   Makes all headings + card titles follow theme
+   ================================ */
+h1, h2, h3, h4, h5, h6,
+.card-title,
+.section-title,
+.title {
+  color: var(--heading) !important;
+}
+
+/* ================================
+   OVERRIDE BOOTSTRAP "text-dark" IN DARK MODE
+   This is the usual culprit for headings staying dark
+   ================================ */
+html[data-theme="dark"] .text-dark,
+html[data-theme="dark"] .text-black,
+html[data-theme="dark"] .text-body {
+  color: var(--text) !important;
+}
+
+/* If any headings are using text-primary and you want them to also follow theme */
+html[data-theme="dark"] .text-primary {
+  color: var(--heading) !important;
+}
+
+/* Project card titles specifically (covers common structures) */
+.proj-card h3, .proj-card h4, .proj-card h5,
+.proj-card .h3, .proj-card .h4, .proj-card .h5,
+.project-card h3, .project-card h4, .project-card h5 {
+  color: var(--heading) !important;
+}
+
+/* Skills card titles */
+.skill-card h3, .skill-card h4, .skill-card h5,
+.skills-grid h3, .skills-grid h4, .skills-grid h5 {
+  color: var(--heading) !important;
+}
+
+
