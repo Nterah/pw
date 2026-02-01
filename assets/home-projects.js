@@ -14,7 +14,7 @@
     {
       title: 'CVTailorView',
       stack: 'React • Flask • PostgreSQL',
-      blurb: 'Profiles, projects, advanced search & branded Word/PDF exports.',
+      blurb: 'Tender-ready CV database with smart matching and branded Word/PDF exports.',
       details: 'projects/cvtailorview.html',
       ctaUrl: 'https://www.cvtailorview.app',
       ctaLabel: 'Open App',
@@ -23,7 +23,7 @@
     {
       title: 'ProVisio',
       stack: 'React • Flask • PostgreSQL',
-      blurb: 'Projects, timesheets, invoicing, creditors & budgets with dashboards.',
+      blurb: 'Projects, timesheets, expenses, invoicing and profit/cashflow dashboards (replacing spreadsheets).',
       details: 'projects/provisio.html',
       ctaUrl: 'https://www.provisio.app',
       ctaLabel: 'Open App',
@@ -32,7 +32,7 @@
     {
       title: 'TAMS360',
       stack: 'React • Flask • PostgreSQL • GIS',
-      blurb: 'Mobile asset capture & inspections with GIS and photo evidence.',
+      blurb: 'Transport asset inventory + inspections with GIS mapping and explainable condition analytics.',
       details: 'projects/tams360.html',
       ctaUrl: 'https://app.tams360.co.za/',
       ctaLabel: 'Open App',
@@ -41,7 +41,7 @@
     {
       title: 'Assetry',
       stack: 'React • Flask • PostgreSQL',
-      blurb: 'Asset register with geofencing, QR/NFC scans, renewals & GRAP reports.',
+      blurb: 'GRAP-aligned asset register with verification, renewals and replacement planning.',
       details: 'projects/assetry.html',
       ctaUrl: 'https://assetry.provisio.app',
       ctaLabel: 'Open App',
@@ -50,7 +50,7 @@
     {
       title: 'TalentGrid',
       stack: 'People Analytics',
-      blurb: 'Analytics across performance, compensation, learning & leave.',
+      blurb: 'South African HRMS with people analytics, role-based UX and compliance-aware workflows.',
       details: 'projects/talentgrid.html',
       ctaUrl: 'https://small-work-96524359.figma.site',
       ctaLabel: 'Design',
@@ -59,7 +59,7 @@
     {
       title: 'Affinity',
       stack: 'CRM',
-      blurb: 'CRM pipelines, interactions, proposals and reminders.',
+      blurb: 'White-label multi-tenant church community app with theme/branding isolation and privacy-first access.',
       details: 'projects/affinity.html',
       ctaUrl: 'https://ready-pepper-25801161.figma.site',
       ctaLabel: 'Design',
@@ -68,7 +68,7 @@
     {
       title: 'Leave Management',
       stack: 'Google Sheets + Apps Script',
-      blurb: 'Requests, approvals, calendars and utilisation reports.',
+      blurb: 'Leave requests, approvals, balances and calendar planning in one lightweight workflow.',
       details: 'projects/leave-management.html',
       ctaUrl: 'https://docs.google.com/spreadsheets/d/1jjnTcOUER1DguwdZEPhrbr__xAp_9nqFi7limxkoQ7Q/edit?usp=sharing',
       ctaLabel: 'Template',
@@ -77,7 +77,7 @@
     {
       title: 'ZiMaSy',
       stack: 'Finance Automation',
-      blurb: 'Automated statements, exceptions and collections workflow.',
+      blurb: 'Mobile-first field attendance & verification with audit-ready evidence and payment-readiness reporting.',
       details: 'projects/zimasy.html',
       ctaUrl: 'https://rare-stoop-55686335.figma.site',
       ctaLabel: 'Design',
@@ -86,7 +86,7 @@
     {
       title: 'QualiPro',
       stack: 'Quality • ISO',
-      blurb: 'ISO-aligned quality planning, risks, milestones & printable audit packs.',
+      blurb: 'Inspections, NCRs and corrective actions with evidence capture and audit-ready reporting.',
       details: 'projects/qualipro.html',
       ctaUrl: 'https://learn-public-72567702.figma.site',
       ctaLabel: 'Design',

@@ -183,3 +183,17 @@ html[data-theme="dark"] .logo-light{display:none}
   .skills-grid .skill-card img { width: 120px; }
 }
 
+/* === Skills thumbnails: bigger (about 3x) === */
+.skill-card img.card-img-top{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 12px;
+}
+@media (max-width: 576px){
+  .skill-card img.card-img-top{ width:150px; height:150px; }
+}
+@media (min-width: 992px){
+  .skill-card img.card-img-top{ width:200px; height:200px; }
+}
