@@ -1,14 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>QualiPro — Case Study</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/theme.js" defer></script>
+  <script src="../assets/gallery-auto.js" defer></script>
+  <style>.summary h3{color:inherit}</style>
 </head>
 <body>
   <main class="container">
-    <p><a href="../index.html#projects" class="back">← Back to projects</a></p>
+    <p><a class="back" href="../index.html#projects">← Back to projects</a></p>
 
     <h1>QualiPro</h1>
     <p class="sub">Quality • ISO • Risks • Milestones • Audit Packs</p>
@@ -17,21 +22,22 @@
       <div id="gallery"></div>
       <aside class="summary card">
         <h3>Summary</h3>
-        <p>Centralises quality planning artefacts—issues, risks, audits, and milestones—so teams work from one source of truth, with printable audit packs and dashboards.</p>
+        <p>Inspection & quality workflow concept: checklists, non-conformances, corrective actions and printable audit packs.</p>
         <ul>
           <li>Single-pane quality logs + risk register</li>
           <li>Milestones with colour-coded status and metrics</li>
           <li>One-click printable audit packs from live data</li>
         </ul>
-        <p class="actions"><a href="#" class="btn">Design</a></p>
+        <p class="actions">
+          <a class="btn" target="_blank" rel="noopener" href="https://learn-public-72567702.figma.site">Design</a>
+          <a class="btn" href="#">Discuss a similar project</a>
+        </p>
       </aside>
     </section>
 
     <h3>Architecture / Stack</h3>
     <p>PostgreSQL • Flask • React • REST/JSON • PDF/CSV export.</p>
   </main>
-
-  <script defer src="../assets/gallery-auto.js"></script>
-  <script>initGallery('#gallery', 'images/projects/5. QualiPro');</script>
+  <script>initGallery('#gallery','images/projects/5. QualiPro');</script>
 </body>
 </html>
