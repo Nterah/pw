@@ -1,65 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TalentGrid — Case Study | Ntembeko Zifuku</title>
-<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<meta name="theme-color" content="#5b7da8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TalentGrid — Case Study | My Portfolio</title>
+  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../assets/nterah-logo-light-rounded.png" alt="Logo" width="28" height="28" class="me-1">
-      <span>My Portfolio</span>
-    </a>
-    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-  </div>
-</nav>
+  <main class="container my-4">
+    <a href="../index.html#projects" class="btn btn-outline-secondary btn-sm mb-3">← Back to projects</a>
 
-<main class="container my-5">
-  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
-  <h1 class="section-title">TalentGrid</h1>
-  <p class="text-muted">People Analytics • Performance • Compensation • Learning • Leave</p>
+    <h1 class="display-6 fw-bold">TalentGrid</h1>
+    <p class="text-muted mb-4">People Analytics</p>
 
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div id="auto-gallery" data-folder="../images/projects/1. TalentGrid"></div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card p-4">
-        <h5 class="fw-bold mb-2">Summary</h5>
-        <p>Unified people analytics—performance, compensation, learning and leave—in a single model, with privacy-aware dashboards and trends for leadership.</p>
-        <ul class="mb-0">
-          <li>Metric library & team/department rollups</li>
-          <li>Equity/fairness checks & red-flag alerts</li>
-          <li>Drill-downs to individual history (RBAC)</li>
-        </ul>
-        <div class="mt-3 d-flex gap-2">
-          <a class="btn btn-primary" href="https://small-work-96524359.figma.site" target="_blank" rel="noopener">Design</a>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-8">
+        <div class="border rounded-3 bg-light-subtle ratio ratio-16x9 d-flex align-items-center justify-content-center"
+             data-gallery-path="../images/projects/1. TalentGrid">
+          <span class="text-muted">Loading previews…</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-body-emphasis mb-3">Summary</h5>
+            <p class="mb-2">People analytics across performance, compensation, learning &amp; leave—designed as a clean, decision-ready dashboard set.</p>
+            <ul class="mb-3">
+              <li>Performance and compensation insights</li>
+              <li>Learning and leave trends</li>
+              <li>Exportable views for presentations</li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-secondary btn-sm" href="#contact">Discuss a similar project</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <hr class="my-5">
-  <h3 class="fw-bold">Architecture / Stack</h3>
-  <p>PostgreSQL • Flask • React • REST/JSON • Aggregations & caching • Role-based access.</p>
+    <hr class="my-4">
+    <section class="mb-5">
+      <h5 class="fw-bold">Architecture / Stack</h5>
+      <p>Design system &amp; dashboards built for web delivery.</p>
+    </section>
+  </main>
 
-  <div class="my-4">
-    <a href="../index.html?ref=talentgrid&title=TalentGrid#contact" class="btn btn-primary">Discuss a similar project</a>
-  </div>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/site.js"></script>
-<script src="../assets/auto-gallery.js"></script>
+  <script src="../assets/bootstrap.bundle.min.js"></script>
+  <script src="../assets/gallery-auto.js"></script>
 </body>
 </html>
