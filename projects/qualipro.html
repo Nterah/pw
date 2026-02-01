@@ -1,63 +1,133 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>QualiPro — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<meta name="theme-color" content="#5b7da8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet">
+<link href="../assets/favicon.ico" rel="icon"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#5b7da8" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../icons/nterah-logo-48.png" " alt="Logo" width="28" height="28" class="me-1">
-      <span>My Portfolio</span>
-    </a>
-    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-  </div>
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+<img alt="Logo" class="me-1" height="28" src="../assets/nterah-logo-light-rounded.png" width="28"/>
+<span>My Portfolio</span>
+</a>
+<button aria-label="Toggle theme" class="theme-toggle ms-auto" onclick="toggleTheme()">🌓</button>
+</div>
 </nav>
-
 <main class="container my-5">
-  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
-  <h1 class="section-title">QualiPro</h1>
-  <p class="text-muted">Project Quality Planning • Risks • Approvals • Exports</p>
-
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div id="auto-gallery" data-folder="../images/projects/5. QualiPro"></div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card p-4">
-        <h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
-        <p>QualiPro operationalizes a nine-section PQP: overview, team, appointments/milestones, planning & design,
-        documentation & tender, works & handover, additional services, close-out & feedback, and scope register.
+<div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
+<h1 class="section-title">QualiPro</h1>
+<p class="text-muted">Quality Management • Inspections • NCR • Corrective Actions</p>
+<div class="row g-4">
+<div class="col-lg-7">
+<div data-folder="../images/projects/5. QualiPro" id="auto-gallery"></div>
+</div>
+<div class="col-lg-5">
+<div class="card p-4">
+<h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
+<p>QualiPro operationalizes a nine-section PQP: overview, team, appointments/milestones, planning &amp; design,
+        documentation &amp; tender, works &amp; handover, additional services, close-out &amp; feedback, and scope register.
         Each section supports structured fields, checklists, uploads, and approvals, with a dashboard that tracks
         completion and risks by stage.</p>
-        <ul class="mb-3">
-          <li>Reusable team entries across projects</li>
-          <li>Full audit trail and file attachments</li>
-          <li>PDF/DOCX export for client submission</li>
-        </ul>
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary" href="https://learn-public-72567702.figma.site" target="_blank" rel="noopener">Visit site</a>
-          <a class="btn btn-outline" href="../index.html?ref=qualipro&title=QualiPro#contact">Discuss a similar project</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<ul class="mb-3">
+<li>Reusable team entries across projects</li>
+<li>Full audit trail and file attachments</li>
+<li>PDF/DOCX export for client submission</li>
+</ul>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-primary" href="https://learn-public-72567702.figma.site" rel="noopener" target="_blank">Visit site</a>
+<a class="btn btn-outline" href="../index.html?ref=qualipro&amp;title=QualiPro#contact">Discuss a similar project</a>
+</div>
+</div>
+</div>
+</div>
+<hr class="my-5"/>
 
-  <hr class="my-5">
-  <h3 class="fw-bold">Architecture / Stack</h3>
-  <p>PostgreSQL • Flask • React • REST/JSON • Export service for PDF/DOCX • Role-based access.</p>
-</main>
 
+<section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">At a glance</h2>
+<h3 class="h6 text-muted text-uppercase mb-2">Who it's for</h3>
+<ul>
+<li>Project/site teams running recurring inspections</li>
+<li>Quality managers needing auditable NCR tracking</li>
+<li>Leadership needing visibility into repeat issues and trends</li>
+</ul>
+<h3 class="h6 text-muted text-uppercase mt-4 mb-2">What it solves</h3>
+<ul>
+<li>Unstructured inspection notes and missing evidence</li>
+<li>NCRs lost in email threads or spreadsheets</li>
+<li>Delayed corrective actions with weak accountability</li>
+<li>Limited reporting on repeat failures and quality hotspots</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Problem</h2>
+<p>Quality breaks down when evidence is inconsistent and corrective actions aren’t tracked end-to-end. This creates repeat issues, weak audit readiness, and reactive problem solving.</p>
+<h2 class="h3 mt-4 mb-3">Solution</h2>
+<p>QualiPro standardises inspections into structured checklists, captures evidence consistently, and tracks NCRs and corrective actions through clear statuses and reports.</p>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Key workflows</h2>
+<ul>
+<li>Create inspection templates/checklists</li>
+<li>Perform inspections and capture findings + evidence</li>
+<li>Log NCRs and assign corrective actions</li>
+<li>Track statuses and accountability to closure</li>
+<li>Review dashboards and reports for trends and repeat issues</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Notable features</h2>
+<ul>
+<li>Structured checklists and inspection templates</li>
+<li>NCR logging with categorisation and severity support</li>
+<li>Corrective action tracking with status and accountability</li>
+<li>Attachment support for evidence and audit trails</li>
+<li>Reporting views for management and compliance</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Tech / Architecture</h2>
+<ul>
+<li>Web app with structured database-backed records</li>
+<li>Workflow and reporting views designed for auditability</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Challenges &amp; decisions</h2>
+<ul>
+<li>Making checklists flexible across contexts without losing structure</li>
+<li>Ensuring evidence capture is fast on site</li>
+<li>Keeping workflows strict enough for audits but usable in reality</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<h2 class="h3 mb-3">Results / impact</h2>
+<ul>
+<li>More consistent inspection and quality records</li>
+<li>Clear accountability on corrective actions</li>
+<li>Better readiness for internal reviews and audits</li>
+</ul>
+</section></main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/site.js"></script>
 <script src="../assets/auto-gallery.js"></script>

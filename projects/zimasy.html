@@ -1,62 +1,133 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>ZiMaSy — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<meta name="theme-color" content="#5b7da8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet">
+<link href="../assets/favicon.ico" rel="icon"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#5b7da8" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../icons/nterah-logo-48.png" " alt="Logo" width="28" height="28" class="me-1">
-      <span>My Portfolio</span>
-    </a>
-    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-  </div>
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+<img alt="Logo" class="me-1" height="28" src="../assets/nterah-logo-light-rounded.png" width="28"/>
+<span>My Portfolio</span>
+</a>
+<button aria-label="Toggle theme" class="theme-toggle ms-auto" onclick="toggleTheme()">🌓</button>
+</div>
 </nav>
-
 <main class="container my-5">
-  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
-  <h1 class="section-title">ZiMaSy</h1>
-  <p class="text-muted">Workflow • Document control • Approvals • SLA & audit trails</p>
-
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div id="auto-gallery" data-folder="../images/projects/2. ZiMaSy"></div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card p-4">
-        <h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
-        <p>ZiMaSy streamlines document routing, approvals, and retention. Teams configure steps, roles, and SLAs;
+<div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
+<h1 class="section-title">ZiMaSy</h1>
+<p class="text-muted">Field Operations • Attendance • Verification • Payment Readiness</p>
+<div class="row g-4">
+<div class="col-lg-7">
+<div data-folder="../images/projects/2. ZiMaSy" id="auto-gallery"></div>
+</div>
+<div class="col-lg-5">
+<div class="card p-4">
+<h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
+<p>ZiMaSy streamlines document routing, approvals, and retention. Teams configure steps, roles, and SLAs;
         documents move automatically with reminders and escalations. Versioning and signatures create an audit-ready
         record for compliance.</p>
-        <ul class="mb-3">
-          <li>Configurable flows by department with due dates & escalations</li>
-          <li>Version control, change logs, and read-receipts</li>
-          <li>Dashboards for SLA adherence and bottlenecks</li>
-        </ul>
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary" href="https://rare-stoop-55686335.figma.site" target="_blank" rel="noopener">Visit site</a>
-          <a class="btn btn-outline" href="../index.html?ref=zimasy&title=ZiMaSy#contact">Discuss a similar project</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<ul class="mb-3">
+<li>Configurable flows by department with due dates &amp; escalations</li>
+<li>Version control, change logs, and read-receipts</li>
+<li>Dashboards for SLA adherence and bottlenecks</li>
+</ul>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-primary" href="https://rare-stoop-55686335.figma.site" rel="noopener" target="_blank">Visit site</a>
+<a class="btn btn-outline" href="../index.html?ref=zimasy&amp;title=ZiMaSy#contact">Discuss a similar project</a>
+</div>
+</div>
+</div>
+</div>
+<hr class="my-5"/>
 
-  <hr class="my-5">
-  <h3 class="fw-bold">Architecture / Stack</h3>
-  <p>PostgreSQL • Flask • React • REST/JSON • Background jobs for reminders and escalations. Exportable trail for audits.</p>
-</main>
 
+<section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">At a glance</h2>
+<h3 class="h6 text-muted text-uppercase mb-2">Who it's for</h3>
+<ul>
+<li>Programme administrators managing large beneficiary lists</li>
+<li>Field supervisors verifying attendance and proof-of-work</li>
+<li>Finance/admin teams preparing accurate payment runs</li>
+</ul>
+<h3 class="h6 text-muted text-uppercase mt-4 mb-2">What it solves</h3>
+<ul>
+<li>Manual, error-prone attendance registers</li>
+<li>Weak evidence and auditability (disputes/fraud risk)</li>
+<li>Slow approvals and inconsistent payment readiness</li>
+<li>Poor visibility into site-level field activity and exceptions</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Problem</h2>
+<p>Field programmes often rely on paper registers or scattered spreadsheets. This creates weak evidence trails, inconsistent approvals, and payment disputes — especially when multiple sites, supervisors, and beneficiaries are involved.</p>
+<h2 class="h3 mt-4 mb-3">Solution</h2>
+<p>ZiMaSy provides a structured workflow from registration through attendance capture and verification. Records are captured with auditable signals (location/time/attachments where needed), approvals are tracked cleanly, and reporting surfaces anomalies before payment preparation.</p>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Key workflows</h2>
+<ul>
+<li>Register beneficiaries with required identity and programme details</li>
+<li>Capture daily attendance/activity with verification evidence</li>
+<li>Supervisor review and approval of submissions</li>
+<li>Admin reporting (missing days, anomalies, site summaries)</li>
+<li>Finance uses approved records to support payment preparation</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Notable features</h2>
+<ul>
+<li>Beneficiary master data management</li>
+<li>Daily attendance/activity logs with verification signals</li>
+<li>Status tracking (submitted → reviewed → approved)</li>
+<li>Exception reporting (anomalies, missing submissions)</li>
+<li>Audit-friendly records designed for governance and accountability</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Tech / Architecture</h2>
+<ul>
+<li>Mobile-first web app patterns (PWA-friendly approach)</li>
+<li>Structured database-backed records for traceability</li>
+<li>Reporting views for operational monitoring and governance</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Challenges &amp; decisions</h2>
+<ul>
+<li>Balancing strict verification with usability for field users</li>
+<li>Designing evidence capture that works in low-connectivity settings</li>
+<li>Keeping workflows simple while remaining audit-grade</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<h2 class="h3 mb-3">Results / impact</h2>
+<ul>
+<li>Improves confidence in attendance records and payment readiness</li>
+<li>Reduces fraud risk through stronger verification trails</li>
+<li>Gives programme leadership clearer operational visibility</li>
+</ul>
+</section></main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/site.js"></script>
 <script src="../assets/auto-gallery.js"></script>

@@ -1,138 +1,136 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>CVTailorView — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<meta name="theme-color" content="#5b7da8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet">
+<link href="../assets/favicon.ico" rel="icon"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#5b7da8" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../icons/nterah-logo-48.png" alt="Ntembeko Zifuku" class="brand-logo">
-      <span>My Portfolio</span>
-    </a>
-    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-  </div>
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+<img alt="Logo" class="me-1" height="28" src="../assets/nterah-logo-light-rounded.png" width="28"/>
+<span>My Portfolio</span>
+</a>
+<button aria-label="Toggle theme" class="theme-toggle ms-auto" onclick="toggleTheme()">🌓</button>
+</div>
 </nav>
-
 <main class="container my-5">
-  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
-  <h1 class="section-title">CVTailorView</h1>
-  <p class="text-muted">Tender CV Generator • Multi-Tenant • Smart Matching &amp; Exports</p>
-
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div id="auto-gallery" data-folder="../images/projects/4. CVTailorView"></div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card p-4">
-        <h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
-        <p>CVTailorView is a multi-tenant platform for building and maintaining a structured CV database (internal staff and external consultants), then generating tender-ready outputs. It supports rich personnel profiles, project experience tracking, requirement-based matching, and document generation (CV packs and supporting tender assets) with consistent branding and templates.</p>
-        <ul class="mb-3">
-  <li>Structured CV/personnel database with detailed profile tabs</li>
-  <li>Project experience tracking (multi-role support, durations, evidence)</li>
-  <li>Tender workflow + requirement capture + match indicators</li>
-  <li>Word/PDF export using templates and branding</li>
-  <li>External CV capture via secure link for consultants</li>
+<div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
+<h1 class="section-title">CVTailorView</h1>
+<p class="text-muted">Tender CV Generator • Multi-Tenant • Smart Matching &amp; Exports</p>
+<div class="row g-4">
+<div class="col-lg-7">
+<div data-folder="../images/projects/4. CVTailorView" id="auto-gallery"></div>
+</div>
+<div class="col-lg-5">
+<div class="card p-4">
+<h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
+<p>CVTailorView is a full-stack app for building project-backed CVs. It centralizes profiles (bio, skills,
+        education, employment, affiliations) and projects with lookups (roles, types, status, clients). Recruiters
+        search by role (with fallback groups), keywords (description-only), duration, value, and date range, then export
+        branded Word/PDF with optional timeline charts.</p>
+<ul class="mb-3">
+<li>Global profile model + headshot/signature handling</li>
+<li>Dynamic filters (clients, roles, types, statuses, value/date ranges)</li>
+<li>Template-based exports and timeline visualizations</li>
 </ul>
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary" href="https://www.cvtailorview.app" target="_blank" rel="noopener">Visit site</a>
-          <a class="btn btn-outline" href="../index.html?ref=cvtailorview&title=CVTailorView#contact">Discuss a similar project</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-primary" href="https://www.cvtailorview.app" rel="noopener" target="_blank">Visit site</a>
+<a class="btn btn-outline" href="../index.html?ref=cvtailorview&amp;title=CVTailorView#contact">Discuss a similar project</a>
+</div>
+</div>
+</div>
+</div>
+<hr class="my-5"/>
 
-  <hr class="my-5">
 
-  <div class="row g-4">
-    <div class="col-lg-6">
-      <h3 class="fw-bold">At a glance</h3>
-      <h6 class="text-muted mt-3 mb-2">Who it’s for</h6>
-      <ul class="mb-3">
-  <li>Engineering/consulting firms responding to tenders</li>
-  <li>Bid teams needing consistent CV formats and fast assembly</li>
-  <li>HR/BD teams maintaining staff and consultant profiles</li>
+<section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">At a glance</h2>
+<h3 class="h6 text-muted text-uppercase mb-2">Who it's for</h3>
+<ul>
+<li>Engineering/consulting firms responding to tenders</li>
+<li>Bid teams needing consistent CV formats and fast assembly</li>
+<li>HR/BD teams maintaining staff and consultant profiles</li>
 </ul>
-      <h6 class="text-muted mt-3 mb-2">What it solves</h6>
-      <ul class="mb-0">
-  <li>Tender prep time wasted rebuilding CVs repeatedly</li>
-  <li>Inconsistent CV formats and missing compliance evidence</li>
-  <li>Weak search/matching when selecting the right personnel</li>
-  <li>No central repository for projects, skills, affiliations, documents</li>
+<h3 class="h6 text-muted text-uppercase mt-4 mb-2">What it solves</h3>
+<ul>
+<li>Tender prep time wasted rebuilding CVs repeatedly</li>
+<li>Inconsistent CV formats and missing compliance evidence</li>
+<li>Weak search/matching when selecting the right personnel</li>
+<li>No central repository for projects, skills, affiliations, documents</li>
 </ul>
-    </div>
-
-    <div class="col-lg-6">
-      <h3 class="fw-bold">Problem</h3>
-      <p>Tender submissions require strict CV formats and evidence (qualifications, registrations, years of experience, relevant projects). When info lives across emails and documents, teams lose time and increase the risk of compliance failure.</p>
-
-      <h3 class="fw-bold mt-4">Solution</h3>
-      <p>CVTailorView centralises personnel information into a structured database. It supports tender workflows that define requirements, shortlist best matches, and generate submission-ready documents with consistent branding and template-based exports.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 mt-1">
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Key workflows</h3>
-      <ul class="mb-0">
-  <li>Onboard a company tenant (branding, defaults, lookup tables)</li>
-  <li>Add internal personnel with structured profile tabs</li>
-  <li>Track projects/experience with roles and durations</li>
-  <li>Create a tender lead and capture requirements</li>
-  <li>Run matching to shortlist candidates with match indicators</li>
-  <li>Generate CV packs and supporting exports (Word/PDF + structured outputs)</li>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Problem</h2>
+<p>Tender submissions require strict CV formats and evidence (qualifications, registrations, years of experience, relevant projects). When info lives across emails and documents, teams lose time and increase the risk of compliance failure.</p>
+<h2 class="h3 mt-4 mb-3">Solution</h2>
+<p>CVTailorView centralises personnel information into a structured database. It supports tender workflows that define requirements, shortlist best matches, and generate submission-ready documents with consistent branding and template-based exports.</p>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Key workflows</h2>
+<ul>
+<li>Onboard a company tenant (branding, defaults, lookup tables)</li>
+<li>Add internal personnel with structured profile tabs</li>
+<li>Track projects/experience with roles and durations</li>
+<li>Create a tender lead and capture requirements</li>
+<li>Run matching to shortlist candidates with match indicators</li>
+<li>Generate CV packs and supporting exports (Word/PDF + structured outputs)</li>
 </ul>
-    </div>
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Notable features</h3>
-      <ul class="mb-0">
-  <li>Multi-tenant onboarding with branding and default configuration</li>
-  <li>Deep profile tabs (bio, education, employment, skills, affiliations, attachments)</li>
-  <li>Advanced search across skills, roles, projects, experience and other filters</li>
-  <li>External CV capture portal (secure access)</li>
-  <li>Document generation across multiple output formats and templates</li>
-  <li>Import/export utilities and admin settings for scaling</li>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Notable features</h2>
+<ul>
+<li>Multi-tenant onboarding with branding and default configuration</li>
+<li>Deep profile tabs (bio, education, employment, skills, affiliations, attachments)</li>
+<li>Advanced search across skills, roles, projects, experience and other filters</li>
+<li>External CV capture portal (secure access)</li>
+<li>Document generation across multiple output formats and templates</li>
+<li>Import/export utilities and admin settings for scaling</li>
 </ul>
-    </div>
-  </div>
-
-  <div class="row g-4 mt-1">
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Tech / Architecture</h3>
-      <ul class="mb-0">
-  <li>SaaS-style tenant isolation + role-based access</li>
-  <li>Export pipelines for Word/PDF with template controls</li>
-  <li>Structured lookup tables for consistency (roles, clients, types, statuses, skills)</li>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Tech / Architecture</h2>
+<ul>
+<li>SaaS-style tenant isolation + role-based access</li>
+<li>Export pipelines for Word/PDF with template controls</li>
+<li>Structured lookup tables for consistency (roles, clients, types, statuses, skills)</li>
 </ul>
-    </div>
-    <div class="col-lg-6">
-      <h3 class="fw-bold mt-4">Challenges & decisions</h3>
-      <ul class="mb-0">
-  <li>Designing onboarding that’s quick but supports deep configuration</li>
-  <li>Balancing data quality with usability across many CV fields</li>
-  <li>Building matching logic that supports bid decision-making without noise</li>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Challenges &amp; decisions</h2>
+<ul>
+<li>Designing onboarding that’s quick but supports deep configuration</li>
+<li>Balancing data quality with usability across many CV fields</li>
+<li>Building matching logic that supports bid decision-making without noise</li>
 </ul>
-    </div>
-  </div>
-
-  <h3 class="fw-bold mt-5">Results / impact</h3>
-  <ul class="mb-0">
-  <li>Faster tender preparation using reusable structured CV data</li>
-  <li>Improved submission consistency with templates and branding controls</li>
-  <li>Better shortlisting confidence through match indicators and advanced search</li>
+</div>
+</div>
+</section><section class="mt-5">
+<h2 class="h3 mb-3">Results / impact</h2>
+<ul>
+<li>Faster tender preparation using reusable structured CV data</li>
+<li>Improved submission consistency with templates and branding controls</li>
+<li>Better shortlisting confidence through match indicators and advanced search</li>
 </ul>
-</main>
-
+</section></main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/site.js"></script>
 <script src="../assets/auto-gallery.js"></script>

@@ -1,61 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Affinity — Case Study | Ntembeko Zifuku</title>
 <script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);} )();</script>
-<link rel="icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<meta name="theme-color" content="#5b7da8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/site.css" rel="stylesheet">
+<link href="../assets/favicon.ico" rel="icon"/>
+<link href="../assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#5b7da8" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
-      <img src="../icons/nterah-logo-48.png" " alt="Logo" width="28" height="28" class="me-1">
-      <span>My Portfolio</span>
-    </a>
-    <button class="theme-toggle ms-auto" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
-  </div>
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../index.html#projects">
+<img alt="Logo" class="me-1" height="28" src="../assets/nterah-logo-light-rounded.png" width="28"/>
+<span>My Portfolio</span>
+</a>
+<button aria-label="Toggle theme" class="theme-toggle ms-auto" onclick="toggleTheme()">🌓</button>
+</div>
 </nav>
-
 <main class="container my-5">
-  <div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
-  <h1 class="section-title">Affinity</h1>
-  <p class="text-muted">CRM • Pipelines • Interactions • Proposals • Reminders</p>
-
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div id="auto-gallery" data-folder="../images/projects/7. Affinity"></div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card p-4">
-        <h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
-        <p>Affinity keeps sales motion disciplined: standard stages, weighted pipelines, interaction logging, and
+<div class="mb-2"><a class="btn btn-outline btn-sm" href="../index.html#projects">← Back</a></div>
+<h1 class="section-title">Affinity</h1>
+<p class="text-muted">White-label Church Community App • Multi-tenant • Theme System</p>
+<div class="row g-4">
+<div class="col-lg-7">
+<div data-folder="../images/projects/7. Affinity" id="auto-gallery"></div>
+</div>
+<div class="col-lg-5">
+<div class="card p-4">
+<h5 class="fw-bold mb-2" style="color:var(--heading)">Summary</h5>
+<p>Affinity keeps sales motion disciplined: standard stages, weighted pipelines, interaction logging, and
         proposal tracking. Built-in reminders nudge the next action, preventing idle opportunities.</p>
-        <ul class="mb-3">
-          <li>Stage probabilities and forecast views</li>
-          <li>Interaction history and follow-up tasks</li>
-          <li>Proposal lifecycle with status changes</li>
-        </ul>
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary" href="https://ready-pepper-25801161.figma.site" target="_blank" rel="noopener">Visit site</a>
-          <a class="btn btn-outline" href="../index.html?ref=affinity&title=Affinity#contact">Discuss a similar project</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<ul class="mb-3">
+<li>Stage probabilities and forecast views</li>
+<li>Interaction history and follow-up tasks</li>
+<li>Proposal lifecycle with status changes</li>
+</ul>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-primary" href="https://ready-pepper-25801161.figma.site" rel="noopener" target="_blank">Visit site</a>
+<a class="btn btn-outline" href="../index.html?ref=affinity&amp;title=Affinity#contact">Discuss a similar project</a>
+</div>
+</div>
+</div>
+</div>
+<hr class="my-5"/>
 
-  <hr class="my-5">
-  <h3 class="fw-bold">Architecture / Stack</h3>
-  <p>PostgreSQL • Flask • React • REST/JSON • background schedulers for reminders & email hooks.</p>
-</main>
 
+<section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">At a glance</h2>
+<h3 class="h6 text-muted text-uppercase mb-2">Who it's for</h3>
+<ul>
+<li>Church leadership and admin teams</li>
+<li>Church members using a mobile-first community app</li>
+<li>Multi-campus organisations needing white-label branding</li>
+</ul>
+<h3 class="h6 text-muted text-uppercase mt-4 mb-2">What it solves</h3>
+<ul>
+<li>High cost of building a custom app per church</li>
+<li>Generic platforms that don’t reflect each church’s brand</li>
+<li>Privacy concerns with public church directories</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Problem</h2>
+<p>Churches want modern digital engagement (resources, announcements, events) but often can’t justify a fully custom build. Members expect a branded experience and privacy controls that avoid open directories.</p>
+<h2 class="h3 mt-4 mb-3">Solution</h2>
+<p>Affinity provides a multi-tenant platform with strict isolation and a reusable theme system, so each church feels like it has its own dedicated app without needing separate codebases.</p>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Key workflows</h2>
+<ul>
+<li>Church admin configures tenant branding (logo, colors, theme)</li>
+<li>Members access via invite or direct link and select church before login</li>
+<li>Members consume church-specific content and participate in community features</li>
+<li>Admins manage content and settings with no cross-tenant visibility</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Notable features</h2>
+<ul>
+<li>Pre-auth church selection and privacy-first access model</li>
+<li>No public directory; invite/direct-link approach</li>
+<li>Complete branding isolation per tenant</li>
+<li>Theme helper utilities for consistent UI across components</li>
+<li>Scalable architecture for adding community modules over time</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<div class="row g-5">
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Tech / Architecture</h2>
+<ul>
+<li>Frontend: React + TypeScript, Tailwind CSS</li>
+<li>UI: component-driven design (shadcn/ui patterns), Lucide icons, toast system</li>
+<li>Tenant isolation model embedded into routing and app structure</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<h2 class="h3 mb-3">Challenges &amp; decisions</h2>
+<ul>
+<li>Ensuring tenant isolation while keeping onboarding simple</li>
+<li>Building a theme system that scales without duplication</li>
+<li>Designing for privacy: no public directory, invite-first access</li>
+</ul>
+</div>
+</div>
+</section><section class="mt-5">
+<h2 class="h3 mb-3">Results / impact</h2>
+<ul>
+<li>Enables churches to launch branded apps without separate codebases</li>
+<li>Improves member trust through privacy-first tenant selection</li>
+<li>Provides a scalable base for future community expansion</li>
+</ul>
+</section></main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/site.js"></script>
 <script src="../assets/auto-gallery.js"></script>
