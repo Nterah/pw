@@ -90,7 +90,7 @@
       details: 'projects/qualipro.html',
       ctaUrl: 'https://learn-public-72567702.figma.site',
       ctaLabel: 'Open App',
-      preview: 'images/projects/5. QualiPro/QualiPro 9. Main.png'
+      preview: 'images/projects/5. QualiPro/QualiPro 2. Dashboard.png'
     }
   ];
 
